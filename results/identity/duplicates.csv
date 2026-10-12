@@ -1,0 +1,350 @@
+dataset,key,rows
+esol,inchikey,147 779
+esol,inchikey,213 976
+esol,inchikey,222 554
+esol,inchikey,232 655
+esol,inchikey,233 276
+esol,inchikey,260 500
+esol,inchikey,323 465
+esol,inchikey,450 1019
+esol,inchikey,680 1069
+esol,inchikey,701 825
+esol,inchikey,703 822
+esol,tautomer,147 779
+esol,tautomer,213 976
+esol,tautomer,222 554
+esol,tautomer,232 655
+esol,tautomer,233 276
+esol,tautomer,260 500
+esol,tautomer,323 465
+esol,tautomer,450 1019
+esol,tautomer,680 1069
+esol,tautomer,701 825
+esol,tautomer,703 822
+lipophilicity,tautomer,1294 2723
+bbbp,inchikey,0 376
+bbbp,inchikey,1 588
+bbbp,inchikey,2 410
+bbbp,inchikey,3 655
+bbbp,inchikey,12 430
+bbbp,inchikey,14 1891
+bbbp,inchikey,16 547
+bbbp,inchikey,22 661
+bbbp,inchikey,28 333
+bbbp,inchikey,32 656
+bbbp,inchikey,33 528
+bbbp,inchikey,36 663
+bbbp,inchikey,44 1767
+bbbp,inchikey,45 483
+bbbp,inchikey,48 561 612
+bbbp,inchikey,49 503
+bbbp,inchikey,51 452
+bbbp,inchikey,54 677
+bbbp,inchikey,55 484
+bbbp,inchikey,58 560 611
+bbbp,inchikey,65 659
+bbbp,inchikey,66 389
+bbbp,inchikey,68 586
+bbbp,inchikey,71 530
+bbbp,inchikey,75 660
+bbbp,inchikey,78 679
+bbbp,inchikey,79 265 564
+bbbp,inchikey,81 529 1526
+bbbp,inchikey,83 448
+bbbp,inchikey,85 658
+bbbp,inchikey,89 657
+bbbp,inchikey,92 384
+bbbp,inchikey,93 308
+bbbp,inchikey,97 1932
+bbbp,inchikey,98 996
+bbbp,inchikey,101 417 664
+bbbp,inchikey,104 916
+bbbp,inchikey,124 1686
+bbbp,inchikey,125 150
+bbbp,inchikey,135 1447
+bbbp,inchikey,136 557
+bbbp,inchikey,138 1946
+bbbp,inchikey,172 1630
+bbbp,inchikey,185 1964
+bbbp,inchikey,187 1493
+bbbp,inchikey,215 1582
+bbbp,inchikey,241 2016
+bbbp,inchikey,248 2030
+bbbp,inchikey,263 1299
+bbbp,inchikey,280 1866
+bbbp,inchikey,292 1373
+bbbp,inchikey,301 1346
+bbbp,inchikey,311 700 1901
+bbbp,inchikey,321 1895
+bbbp,inchikey,322 1366
+bbbp,inchikey,340 1552
+bbbp,inchikey,390 614
+bbbp,inchikey,432 1647
+bbbp,inchikey,445 946
+bbbp,inchikey,462 463
+bbbp,inchikey,485 602
+bbbp,inchikey,518 1060
+bbbp,inchikey,550 1097
+bbbp,inchikey,559 1072
+bbbp,inchikey,562 613
+bbbp,inchikey,566 1323
+bbbp,inchikey,580 1456
+bbbp,inchikey,642 1568
+bbbp,inchikey,652 1956
+bbbp,inchikey,678 953
+bbbp,inchikey,687 1867
+bbbp,tautomer,0 376
+bbbp,tautomer,1 588
+bbbp,tautomer,2 410
+bbbp,tautomer,3 655
+bbbp,tautomer,12 430
+bbbp,tautomer,14 1891
+bbbp,tautomer,16 547
+bbbp,tautomer,22 661
+bbbp,tautomer,28 333
+bbbp,tautomer,32 656
+bbbp,tautomer,33 528
+bbbp,tautomer,36 663
+bbbp,tautomer,44 1767
+bbbp,tautomer,45 483
+bbbp,tautomer,48 561 612
+bbbp,tautomer,49 503
+bbbp,tautomer,51 452
+bbbp,tautomer,54 677
+bbbp,tautomer,55 484
+bbbp,tautomer,58 560 611
+bbbp,tautomer,65 659
+bbbp,tautomer,66 389
+bbbp,tautomer,68 586
+bbbp,tautomer,71 530
+bbbp,tautomer,75 660
+bbbp,tautomer,78 679
+bbbp,tautomer,79 265 564
+bbbp,tautomer,81 529 1526
+bbbp,tautomer,83 448
+bbbp,tautomer,85 658
+bbbp,tautomer,89 657
+bbbp,tautomer,92 384
+bbbp,tautomer,93 308
+bbbp,tautomer,97 1932
+bbbp,tautomer,98 996
+bbbp,tautomer,101 417 664
+bbbp,tautomer,104 916
+bbbp,tautomer,124 1686
+bbbp,tautomer,125 150 851
+bbbp,tautomer,135 1447
+bbbp,tautomer,136 557
+bbbp,tautomer,138 1946
+bbbp,tautomer,172 1630
+bbbp,tautomer,185 1964
+bbbp,tautomer,187 1493
+bbbp,tautomer,215 1582
+bbbp,tautomer,241 2016
+bbbp,tautomer,248 2030
+bbbp,tautomer,263 1299
+bbbp,tautomer,280 1866
+bbbp,tautomer,292 1373
+bbbp,tautomer,301 1346
+bbbp,tautomer,311 700 1901
+bbbp,tautomer,321 1895
+bbbp,tautomer,322 1366
+bbbp,tautomer,340 1552
+bbbp,tautomer,390 614
+bbbp,tautomer,391 900
+bbbp,tautomer,432 1647
+bbbp,tautomer,445 946
+bbbp,tautomer,462 463
+bbbp,tautomer,485 602
+bbbp,tautomer,518 1060
+bbbp,tautomer,550 1097
+bbbp,tautomer,559 1072
+bbbp,tautomer,562 613
+bbbp,tautomer,566 1323
+bbbp,tautomer,580 1456
+bbbp,tautomer,642 1568
+bbbp,tautomer,652 1956
+bbbp,tautomer,678 953
+bbbp,tautomer,687 1867
+bace,inchikey,71 638
+bace,inchikey,142 1089
+bace,inchikey,236 1231
+bace,tautomer,71 638
+bace,tautomer,236 1231
+clintox,inchikey,12 13
+clintox,inchikey,83 367
+clintox,inchikey,97 369
+clintox,inchikey,98 370
+clintox,inchikey,109 114
+clintox,inchikey,121 122 181
+clintox,inchikey,141 212
+clintox,inchikey,168 169
+clintox,inchikey,192 193
+clintox,inchikey,210 318
+clintox,inchikey,211 218
+clintox,inchikey,345 346
+clintox,inchikey,371 378
+clintox,inchikey,373 379
+clintox,inchikey,438 439
+clintox,inchikey,464 465
+clintox,inchikey,520 522
+clintox,inchikey,521 523
+clintox,inchikey,569 1359
+clintox,inchikey,571 1360
+clintox,inchikey,607 1395
+clintox,inchikey,637 1396
+clintox,inchikey,639 1372
+clintox,inchikey,646 1410
+clintox,inchikey,662 663
+clintox,inchikey,700 701
+clintox,inchikey,720 758
+clintox,inchikey,812 813
+clintox,inchikey,837 838
+clintox,inchikey,842 844
+clintox,inchikey,897 955
+clintox,inchikey,908 1009
+clintox,inchikey,913 914
+clintox,inchikey,918 919
+clintox,inchikey,929 1001
+clintox,inchikey,930 931 1002
+clintox,inchikey,999 1405 1407
+clintox,inchikey,1043 1044
+clintox,inchikey,1081 1286
+clintox,inchikey,1086 1287 1288
+clintox,inchikey,1152 1153
+clintox,inchikey,1158 1160
+clintox,inchikey,1253 1254
+clintox,inchikey,1273 1274
+clintox,inchikey,1364 1365
+clintox,inchikey,1368 1369 1370
+clintox,inchikey,1389 1392
+clintox,inchikey,1428 1442
+clintox,inchikey,1462 1463 1464
+clintox,inchikey,1466 1467
+clintox,tautomer,12 13
+clintox,tautomer,83 367
+clintox,tautomer,97 369
+clintox,tautomer,98 370
+clintox,tautomer,109 114
+clintox,tautomer,121 122 181
+clintox,tautomer,141 212
+clintox,tautomer,168 169
+clintox,tautomer,192 193
+clintox,tautomer,210 318
+clintox,tautomer,211 218
+clintox,tautomer,345 346
+clintox,tautomer,371 378
+clintox,tautomer,373 379
+clintox,tautomer,438 439
+clintox,tautomer,464 465
+clintox,tautomer,520 522
+clintox,tautomer,521 523
+clintox,tautomer,569 1359
+clintox,tautomer,571 1360
+clintox,tautomer,607 1395
+clintox,tautomer,637 1396
+clintox,tautomer,639 1372
+clintox,tautomer,646 1410
+clintox,tautomer,660 1400
+clintox,tautomer,662 663
+clintox,tautomer,700 701
+clintox,tautomer,720 758
+clintox,tautomer,812 813
+clintox,tautomer,837 838
+clintox,tautomer,842 844
+clintox,tautomer,897 955
+clintox,tautomer,908 1009
+clintox,tautomer,913 914
+clintox,tautomer,918 919
+clintox,tautomer,929 1001
+clintox,tautomer,930 931 1002
+clintox,tautomer,983 984
+clintox,tautomer,999 1405 1407
+clintox,tautomer,1043 1044
+clintox,tautomer,1081 1286
+clintox,tautomer,1086 1287 1288
+clintox,tautomer,1152 1153
+clintox,tautomer,1158 1160
+clintox,tautomer,1253 1254
+clintox,tautomer,1273 1274
+clintox,tautomer,1364 1365
+clintox,tautomer,1368 1369 1370
+clintox,tautomer,1389 1392
+clintox,tautomer,1428 1442
+clintox,tautomer,1462 1463 1464
+clintox,tautomer,1466 1467
+sider,inchikey,0 1111
+sider,inchikey,3 26
+sider,inchikey,9 388
+sider,inchikey,34 146 1234
+sider,inchikey,50 1058
+sider,inchikey,86 1016
+sider,inchikey,87 180 274
+sider,inchikey,119 468 936 1033
+sider,inchikey,148 745
+sider,inchikey,150 1347
+sider,inchikey,161 1043
+sider,inchikey,188 699
+sider,inchikey,217 1415
+sider,inchikey,226 494 843 1249
+sider,inchikey,233 702
+sider,inchikey,250 655 967
+sider,inchikey,279 518
+sider,inchikey,352 505
+sider,inchikey,363 414
+sider,inchikey,455 456
+sider,inchikey,461 1245
+sider,inchikey,656 657
+sider,inchikey,663 1378
+sider,inchikey,696 1161
+sider,inchikey,754 1411
+sider,inchikey,798 1275
+sider,inchikey,836 1032
+sider,inchikey,846 1233
+sider,inchikey,852 1211
+sider,inchikey,906 1374
+sider,inchikey,1046 1274
+sider,inchikey,1054 1055
+sider,inchikey,1148 1255
+sider,inchikey,1150 1196
+sider,inchikey,1235 1322
+sider,inchikey,1253 1254
+sider,inchikey,1285 1386
+sider,inchikey,1417 1419
+sider,tautomer,0 1111
+sider,tautomer,3 26
+sider,tautomer,9 388
+sider,tautomer,34 146 1234
+sider,tautomer,50 1058
+sider,tautomer,86 1016
+sider,tautomer,87 180 274
+sider,tautomer,119 468 936 1033
+sider,tautomer,148 745
+sider,tautomer,150 1347
+sider,tautomer,161 1043
+sider,tautomer,188 699
+sider,tautomer,217 1415
+sider,tautomer,226 494 843 1249
+sider,tautomer,233 702
+sider,tautomer,250 655 967
+sider,tautomer,279 518
+sider,tautomer,352 505
+sider,tautomer,363 414
+sider,tautomer,455 456
+sider,tautomer,461 1245
+sider,tautomer,656 657
+sider,tautomer,663 1378
+sider,tautomer,696 1161
+sider,tautomer,754 1411
+sider,tautomer,798 1275
+sider,tautomer,836 1032
+sider,tautomer,846 1233
+sider,tautomer,852 1211
+sider,tautomer,906 1374
+sider,tautomer,1046 1274
+sider,tautomer,1054 1055
+sider,tautomer,1148 1255
+sider,tautomer,1150 1196
+sider,tautomer,1235 1322
+sider,tautomer,1253 1254
+sider,tautomer,1285 1386
+sider,tautomer,1417 1419

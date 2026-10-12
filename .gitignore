@@ -1,0 +1,6 @@
+# created by the scripts or downloaded by the reader (see README.md)
+data/
+features/
+models/
+__pycache__/
+.DS_Store

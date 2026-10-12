@@ -1,0 +1,375 @@
+dataset,kind,task,model,features,split,metric,value,pred_file
+esol,regression,logS,TabPFN,ecfp4_2048,det,RMSE,1.3730929666638112,esol__logS__det.npy
+esol,regression,logS,TabPFN,ecfp4_2048,0,RMSE,1.5997036010371686,esol__logS__0.npy
+esol,regression,logS,TabPFN,ecfp4_2048,1,RMSE,1.2935779358192012,esol__logS__1.npy
+esol,regression,logS,TabPFN,ecfp4_2048,2,RMSE,1.6319892308733233,esol__logS__2.npy
+esol,regression,logS,TabPFN,ecfp4_2048,3,RMSE,1.3964364116773378,esol__logS__3.npy
+esol,regression,logS,TabPFN,ecfp4_2048,4,RMSE,1.491064996689608,esol__logS__4.npy
+esol,regression,logS,TabPFN,ecfp4_2048,5,RMSE,1.212009845771027,esol__logS__5.npy
+esol,regression,logS,TabPFN,ecfp4_2048,6,RMSE,1.5772527975574877,esol__logS__6.npy
+esol,regression,logS,TabPFN,ecfp4_2048,7,RMSE,1.3385719138433303,esol__logS__7.npy
+esol,regression,logS,TabPFN,ecfp4_2048,8,RMSE,1.316211655191048,esol__logS__8.npy
+esol,regression,logS,TabPFN,ecfp4_2048,9,RMSE,1.1874609857270224,esol__logS__9.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,det,RMSE,3.0599768877955684,freesolv__dGhyd__det.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,0,RMSE,3.979293274831912,freesolv__dGhyd__0.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,1,RMSE,1.909476677518699,freesolv__dGhyd__1.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,2,RMSE,3.3955936966926252,freesolv__dGhyd__2.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,3,RMSE,2.158860506210693,freesolv__dGhyd__3.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,4,RMSE,5.045731206735212,freesolv__dGhyd__4.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,5,RMSE,3.893144772615564,freesolv__dGhyd__5.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,6,RMSE,4.97446010832561,freesolv__dGhyd__6.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,7,RMSE,3.5802070261916503,freesolv__dGhyd__7.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,8,RMSE,4.3792673641764805,freesolv__dGhyd__8.npy
+freesolv,regression,dGhyd,TabPFN,ecfp4_2048,9,RMSE,3.068820834208104,freesolv__dGhyd__9.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,det,RMSE,0.9031514404426708,lipophilicity__logD__det.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,0,RMSE,0.9052608709912938,lipophilicity__logD__0.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,1,RMSE,0.9405673126818204,lipophilicity__logD__1.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,2,RMSE,0.9813726766831856,lipophilicity__logD__2.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,3,RMSE,0.9457825156463188,lipophilicity__logD__3.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,4,RMSE,0.9225111902530414,lipophilicity__logD__4.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,5,RMSE,0.9024501187751318,lipophilicity__logD__5.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,6,RMSE,0.8429723225596759,lipophilicity__logD__6.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,7,RMSE,0.9919676933174372,lipophilicity__logD__7.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,8,RMSE,0.8913818856658532,lipophilicity__logD__8.npy
+lipophilicity,regression,logD,TabPFN,ecfp4_2048,9,RMSE,1.038089731107788,lipophilicity__logD__9.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,det,AUC-ROC,0.710858464206571,bbbp__p_np__det.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,0,AUC-ROC,0.9569108582266476,bbbp__p_np__0.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,1,AUC-ROC,0.9381287726358148,bbbp__p_np__1.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,2,AUC-ROC,0.863183409641799,bbbp__p_np__2.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,3,AUC-ROC,0.9476943831248468,bbbp__p_np__3.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,4,AUC-ROC,0.8895348837209303,bbbp__p_np__4.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,5,AUC-ROC,0.8653259210813167,bbbp__p_np__5.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,6,AUC-ROC,0.9387803340687048,bbbp__p_np__6.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,7,AUC-ROC,0.8751791686574295,bbbp__p_np__7.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,8,AUC-ROC,0.7719327731092438,bbbp__p_np__8.npy
+bbbp,classification,p_np,TabPFN,ecfp4_2048,9,AUC-ROC,0.9594768942059582,bbbp__p_np__9.npy
+bace,classification,Class,TabPFN,ecfp4_2048,det,AUC-ROC,0.873731884057971,bace__Class__det.npy
+bace,classification,Class,TabPFN,ecfp4_2048,0,AUC-ROC,0.9052366915207212,bace__Class__0.npy
+bace,classification,Class,TabPFN,ecfp4_2048,1,AUC-ROC,0.8750658472344162,bace__Class__1.npy
+bace,classification,Class,TabPFN,ecfp4_2048,2,AUC-ROC,0.8725541125541125,bace__Class__2.npy
+bace,classification,Class,TabPFN,ecfp4_2048,3,AUC-ROC,0.9029616724738676,bace__Class__3.npy
+bace,classification,Class,TabPFN,ecfp4_2048,4,AUC-ROC,0.9308365226899944,bace__Class__4.npy
+bace,classification,Class,TabPFN,ecfp4_2048,5,AUC-ROC,0.8343023255813954,bace__Class__5.npy
+bace,classification,Class,TabPFN,ecfp4_2048,6,AUC-ROC,0.8353669319186561,bace__Class__6.npy
+bace,classification,Class,TabPFN,ecfp4_2048,7,AUC-ROC,0.8794926004228331,bace__Class__7.npy
+bace,classification,Class,TabPFN,ecfp4_2048,8,AUC-ROC,0.8314548292006242,bace__Class__8.npy
+bace,classification,Class,TabPFN,ecfp4_2048,9,AUC-ROC,0.8859803921568628,bace__Class__9.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,det,AUC-ROC,0.701039168665068,clintox__FDA_APPROVED__det.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,det,AUC-ROC,0.7543478260869565,clintox__CT_TOX__det.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,0,AUC-ROC,0.7417279411764706,clintox__FDA_APPROVED__0.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,0,AUC-ROC,0.7398720682302772,clintox__CT_TOX__0.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,1,AUC-ROC,0.8484848484848484,clintox__FDA_APPROVED__1.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,1,AUC-ROC,0.8513695554557701,clintox__CT_TOX__1.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,2,AUC-ROC,0.8130434782608695,clintox__FDA_APPROVED__2.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,2,AUC-ROC,0.8057971014492754,clintox__CT_TOX__2.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,3,AUC-ROC,0.855072463768116,clintox__FDA_APPROVED__3.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,3,AUC-ROC,0.789828431372549,clintox__CT_TOX__3.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,4,AUC-ROC,0.7776785714285714,clintox__FDA_APPROVED__4.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,4,AUC-ROC,0.7757133377571334,clintox__CT_TOX__4.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,5,AUC-ROC,0.7353219696969698,clintox__FDA_APPROVED__5.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,5,AUC-ROC,0.7064393939393939,clintox__CT_TOX__5.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,6,AUC-ROC,0.828125,clintox__FDA_APPROVED__6.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,6,AUC-ROC,0.7638392857142857,clintox__CT_TOX__6.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,7,AUC-ROC,0.8404114134041141,clintox__FDA_APPROVED__7.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,7,AUC-ROC,0.8593984962406015,clintox__CT_TOX__7.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,8,AUC-ROC,0.8235294117647058,clintox__FDA_APPROVED__8.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,8,AUC-ROC,0.8606516290726818,clintox__CT_TOX__8.npy
+clintox,classification,FDA_APPROVED,TabPFN,ecfp4_2048,9,AUC-ROC,0.7937973484848486,clintox__FDA_APPROVED__9.npy
+clintox,classification,CT_TOX,TabPFN,ecfp4_2048,9,AUC-ROC,0.7478632478632479,clintox__CT_TOX__9.npy
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.6227967097532314,sider__Hepatobiliary disorders__det.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.5346938775510204,sider__Metabolism and nutrition disorders__det.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,det,AUC-ROC,0.7086330935251799,sider__Product issues__det.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.6963361210673039,sider__Eye disorders__det.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,det,AUC-ROC,0.7342222222222221,sider__Investigations__det.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.6542699724517906,sider__Musculoskeletal and connective tissue disorders__det.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.731404958677686,sider__Gastrointestinal disorders__det.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,det,AUC-ROC,0.6290322580645161,sider__Social circumstances__det.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.5786967418546366,sider__Immune system disorders__det.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.698422090729783,sider__Reproductive system and breast disorders__det.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,det,AUC-ROC,0.6476824457593688,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__det.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,det,AUC-ROC,0.6304133858267716,sider__General disorders and administration site conditions__det.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.659504132231405,sider__Endocrine disorders__det.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,det,AUC-ROC,0.4721893491124261,sider__Surgical and medical procedures__det.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.6195276497695852,sider__Vascular disorders__det.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.7190763052208836,sider__Blood and lymphatic system disorders__det.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.7274939172749392,sider__Skin and subcutaneous tissue disorders__det.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,det,AUC-ROC,0.5182072829131652,"sider__Congenital, familial and genetic disorders__det.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,det,AUC-ROC,0.7258368694012258,sider__Infections and infestations__det.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,det,AUC-ROC,0.6934700485698866,"sider__Respiratory, thoracic and mediastinal disorders__det.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.6389287422285987,sider__Psychiatric disorders__det.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.7088377723970944,sider__Renal and urinary disorders__det.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,det,AUC-ROC,0.6691176470588235,"sider__Pregnancy, puerperium and perinatal conditions__det.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.6002913025384936,sider__Ear and labyrinth disorders__det.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.6432506887052342,sider__Cardiac disorders__det.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,det,AUC-ROC,0.6683250414593698,sider__Nervous system disorders__det.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,det,AUC-ROC,0.6252427184466018,"sider__Injury, poisoning and procedural complications__det.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.7561830574488803,sider__Hepatobiliary disorders__0.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.5735735735735736,sider__Metabolism and nutrition disorders__0.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,0,AUC-ROC,0.4946428571428571,sider__Product issues__0.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.6080539742778832,sider__Eye disorders__0.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,0,AUC-ROC,0.5780100658149439,sider__Investigations__0.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.5252272727272727,sider__Musculoskeletal and connective tissue disorders__0.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.7693236714975846,sider__Gastrointestinal disorders__0.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,0,AUC-ROC,0.5847953216374269,sider__Social circumstances__0.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.6634502923976608,sider__Immune system disorders__0.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.6116486068111455,sider__Reproductive system and breast disorders__0.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,0,AUC-ROC,0.5939903846153846,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__0.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,0,AUC-ROC,0.7753086419753086,sider__General disorders and administration site conditions__0.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.5941358024691358,sider__Endocrine disorders__0.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,0,AUC-ROC,0.6284722222222222,sider__Surgical and medical procedures__0.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.6105295566502463,sider__Vascular disorders__0.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.6325938212730666,sider__Blood and lymphatic system disorders__0.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.5965073529411765,sider__Skin and subcutaneous tissue disorders__0.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,0,AUC-ROC,0.630241935483871,"sider__Congenital, familial and genetic disorders__0.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,0,AUC-ROC,0.6566186107470511,sider__Infections and infestations__0.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,0,AUC-ROC,0.5475262368815592,"sider__Respiratory, thoracic and mediastinal disorders__0.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.5367798353909465,sider__Psychiatric disorders__0.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.6273871527777778,sider__Renal and urinary disorders__0.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,0,AUC-ROC,0.6320987654320986,"sider__Pregnancy, puerperium and perinatal conditions__0.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.5814492753623188,sider__Ear and labyrinth disorders__0.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.6766975308641976,sider__Cardiac disorders__0.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,0,AUC-ROC,0.3857142857142857,sider__Nervous system disorders__0.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,0,AUC-ROC,0.5442307692307692,"sider__Injury, poisoning and procedural complications__0.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6948412698412698,sider__Hepatobiliary disorders__1.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.4827674897119342,sider__Metabolism and nutrition disorders__1.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,1,AUC-ROC,0.7446808510638299,sider__Product issues__1.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.7043771043771044,sider__Eye disorders__1.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,1,AUC-ROC,0.5174736842105263,sider__Investigations__1.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6171852697687696,sider__Musculoskeletal and connective tissue disorders__1.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.5634191176470589,sider__Gastrointestinal disorders__1.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,1,AUC-ROC,0.5880541871921183,sider__Social circumstances__1.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6111904082215244,sider__Immune system disorders__1.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6545674531155475,sider__Reproductive system and breast disorders__1.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,1,AUC-ROC,0.6377403846153846,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__1.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,1,AUC-ROC,0.5101010101010102,sider__General disorders and administration site conditions__1.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6036522633744856,sider__Endocrine disorders__1.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,1,AUC-ROC,0.4921008403361345,sider__Surgical and medical procedures__1.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.5954861111111112,sider__Vascular disorders__1.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6694878472222222,sider__Blood and lymphatic system disorders__1.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6621480709071951,sider__Skin and subcutaneous tissue disorders__1.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,1,AUC-ROC,0.5175438596491229,"sider__Congenital, familial and genetic disorders__1.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,1,AUC-ROC,0.6358543417366948,sider__Infections and infestations__1.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,1,AUC-ROC,0.6347222222222223,"sider__Respiratory, thoracic and mediastinal disorders__1.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.7027540360873693,sider__Psychiatric disorders__1.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.4956275720164609,sider__Renal and urinary disorders__1.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,1,AUC-ROC,0.5945054945054945,"sider__Pregnancy, puerperium and perinatal conditions__1.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6224074433029657,sider__Ear and labyrinth disorders__1.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.682529335071708,sider__Cardiac disorders__1.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,1,AUC-ROC,0.6091549295774648,sider__Nervous system disorders__1.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,1,AUC-ROC,0.6016826923076923,"sider__Injury, poisoning and procedural complications__1.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.6838235294117647,sider__Hepatobiliary disorders__2.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.6025788625374165,sider__Metabolism and nutrition disorders__2.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,2,AUC-ROC,0.6737588652482269,sider__Product issues__2.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.6160493827160494,sider__Eye disorders__2.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,2,AUC-ROC,0.6230994152046783,sider__Investigations__2.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.5545787545787546,sider__Musculoskeletal and connective tissue disorders__2.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.7200176366843034,sider__Gastrointestinal disorders__2.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,2,AUC-ROC,0.673630895853118,sider__Social circumstances__2.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.5926778724384065,sider__Immune system disorders__2.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.6564251207729468,sider__Reproductive system and breast disorders__2.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,2,AUC-ROC,0.6820728291316527,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__2.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,2,AUC-ROC,0.6368131868131868,sider__General disorders and administration site conditions__2.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.720839580209895,sider__Endocrine disorders__2.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,2,AUC-ROC,0.685820895522388,sider__Surgical and medical procedures__2.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.5583416087388282,sider__Vascular disorders__2.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.66015625,sider__Blood and lymphatic system disorders__2.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.7241161616161615,sider__Skin and subcutaneous tissue disorders__2.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,2,AUC-ROC,0.621903520208605,"sider__Congenital, familial and genetic disorders__2.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,2,AUC-ROC,0.7581818181818182,sider__Infections and infestations__2.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,2,AUC-ROC,0.603940388987118,"sider__Respiratory, thoracic and mediastinal disorders__2.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.596171802054155,sider__Psychiatric disorders__2.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.6394277875759358,sider__Renal and urinary disorders__2.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,2,AUC-ROC,0.6770405167351732,"sider__Pregnancy, puerperium and perinatal conditions__2.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.6383019965109519,sider__Ear and labyrinth disorders__2.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.6539325842696629,sider__Cardiac disorders__2.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,2,AUC-ROC,0.7102272727272727,sider__Nervous system disorders__2.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,2,AUC-ROC,0.6172506738544474,"sider__Injury, poisoning and procedural complications__2.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.6162532768703368,sider__Hepatobiliary disorders__3.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.3999503475670307,sider__Metabolism and nutrition disorders__3.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,3,AUC-ROC,0.5352112676056338,sider__Product issues__3.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.6171199662660763,sider__Eye disorders__3.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,3,AUC-ROC,0.4529874942102825,sider__Investigations__3.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.562778505897772,sider__Musculoskeletal and connective tissue disorders__3.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.5487132352941176,sider__Gastrointestinal disorders__3.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,3,AUC-ROC,0.6225369458128078,sider__Social circumstances__3.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.5523391812865498,sider__Immune system disorders__3.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.6976744186046512,sider__Reproductive system and breast disorders__3.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,3,AUC-ROC,0.6514029180695847,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__3.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,3,AUC-ROC,0.7320125130344108,sider__General disorders and administration site conditions__3.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.6445473251028806,sider__Endocrine disorders__3.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,3,AUC-ROC,0.514903129657228,sider__Surgical and medical procedures__3.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.5384852216748769,sider__Vascular disorders__3.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.699934196095635,sider__Blood and lymphatic system disorders__3.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.5005213764337852,sider__Skin and subcutaneous tissue disorders__3.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,3,AUC-ROC,0.5514993481095176,"sider__Congenital, familial and genetic disorders__3.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,3,AUC-ROC,0.6444885799404171,sider__Infections and infestations__3.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,3,AUC-ROC,0.6260288065843621,"sider__Respiratory, thoracic and mediastinal disorders__3.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.6221707818930041,sider__Psychiatric disorders__3.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.6279885939899101,sider__Renal and urinary disorders__3.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,3,AUC-ROC,0.6362903225806451,"sider__Pregnancy, puerperium and perinatal conditions__3.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.6198523698523698,sider__Ear and labyrinth disorders__3.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.5616161616161617,sider__Cardiac disorders__3.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,3,AUC-ROC,0.53125,sider__Nervous system disorders__3.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,3,AUC-ROC,0.5398395721925133,"sider__Injury, poisoning and procedural complications__3.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.7426640926640926,sider__Hepatobiliary disorders__4.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.5826923076923076,sider__Metabolism and nutrition disorders__4.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,4,AUC-ROC,0.3426573426573427,sider__Product issues__4.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.6233300099700897,sider__Eye disorders__4.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,4,AUC-ROC,0.6909722222222223,sider__Investigations__4.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.6206554121151936,sider__Musculoskeletal and connective tissue disorders__4.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.5458937198067633,sider__Gastrointestinal disorders__4.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,4,AUC-ROC,0.6571428571428571,sider__Social circumstances__4.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.5555555555555555,sider__Immune system disorders__4.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.6895752895752896,sider__Reproductive system and breast disorders__4.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,4,AUC-ROC,0.6402681231380337,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__4.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,4,AUC-ROC,0.5513799177921315,sider__General disorders and administration site conditions__4.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.647326203208556,sider__Endocrine disorders__4.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,4,AUC-ROC,0.4200542005420054,sider__Surgical and medical procedures__4.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.5098722415795587,sider__Vascular disorders__4.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.7497364537212733,sider__Blood and lymphatic system disorders__4.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.6176470588235294,sider__Skin and subcutaneous tissue disorders__4.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,4,AUC-ROC,0.4694523583412472,"sider__Congenital, familial and genetic disorders__4.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,4,AUC-ROC,0.6354545454545455,sider__Infections and infestations__4.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,4,AUC-ROC,0.627176705680845,"sider__Respiratory, thoracic and mediastinal disorders__4.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.5915635261429655,sider__Psychiatric disorders__4.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.7213147812058882,sider__Renal and urinary disorders__4.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,4,AUC-ROC,0.7127525252525253,"sider__Pregnancy, puerperium and perinatal conditions__4.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.5941073851521612,sider__Ear and labyrinth disorders__4.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.6632996632996634,sider__Cardiac disorders__4.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,4,AUC-ROC,0.6561151079136691,sider__Nervous system disorders__4.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,4,AUC-ROC,0.5304152637485972,"sider__Injury, poisoning and procedural complications__4.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.7639727361246349,sider__Hepatobiliary disorders__5.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.573559670781893,sider__Metabolism and nutrition disorders__5.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,5,AUC-ROC,0.4683098591549296,sider__Product issues__5.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.6272727272727273,sider__Eye disorders__5.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,5,AUC-ROC,0.6194376194376194,sider__Investigations__5.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.6367788461538462,sider__Musculoskeletal and connective tissue disorders__5.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.6925505050505051,sider__Gastrointestinal disorders__5.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,5,AUC-ROC,0.6040536682843277,sider__Social circumstances__5.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.5594308035714286,sider__Immune system disorders__5.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.678402832415421,sider__Reproductive system and breast disorders__5.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,5,AUC-ROC,0.6437710437710438,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__5.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,5,AUC-ROC,0.6873385012919897,sider__General disorders and administration site conditions__5.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.6527472527472528,sider__Endocrine disorders__5.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,5,AUC-ROC,0.522098454904779,sider__Surgical and medical procedures__5.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.5061375963459891,sider__Vascular disorders__5.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.7357679914070892,sider__Blood and lymphatic system disorders__5.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.5509043927648579,sider__Skin and subcutaneous tissue disorders__5.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,5,AUC-ROC,0.7003348214285714,"sider__Congenital, familial and genetic disorders__5.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,5,AUC-ROC,0.6175687666370896,sider__Infections and infestations__5.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,5,AUC-ROC,0.5756172839506173,"sider__Respiratory, thoracic and mediastinal disorders__5.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.6021634615384616,sider__Psychiatric disorders__5.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.6572646103896105,sider__Renal and urinary disorders__5.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,5,AUC-ROC,0.5852631578947368,"sider__Pregnancy, puerperium and perinatal conditions__5.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.6203124999999999,sider__Ear and labyrinth disorders__5.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.5995510662177329,sider__Cardiac disorders__5.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,5,AUC-ROC,0.6923879040667362,sider__Nervous system disorders__5.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,5,AUC-ROC,0.5617459969291512,"sider__Injury, poisoning and procedural complications__5.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6696061140505586,sider__Hepatobiliary disorders__6.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.5659682247294496,sider__Metabolism and nutrition disorders__6.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,6,AUC-ROC,0.7570422535211268,sider__Product issues__6.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.706959706959707,sider__Eye disorders__6.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,6,AUC-ROC,0.6077310924369748,sider__Investigations__6.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6717099628889523,sider__Musculoskeletal and connective tissue disorders__6.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.7949419002050581,sider__Gastrointestinal disorders__6.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,6,AUC-ROC,0.6099439775910364,sider__Social circumstances__6.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6286096256684491,sider__Immune system disorders__6.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6602655771195096,sider__Reproductive system and breast disorders__6.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,6,AUC-ROC,0.6756756756756758,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__6.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,6,AUC-ROC,0.6001367053998633,sider__General disorders and administration site conditions__6.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6467914438502674,sider__Endocrine disorders__6.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,6,AUC-ROC,0.418103448275862,sider__Surgical and medical procedures__6.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6581512605042017,sider__Vascular disorders__6.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6680134680134681,sider__Blood and lymphatic system disorders__6.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6584362139917694,sider__Skin and subcutaneous tissue disorders__6.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,6,AUC-ROC,0.5971972691340279,"sider__Congenital, familial and genetic disorders__6.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,6,AUC-ROC,0.660681818181818,sider__Infections and infestations__6.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,6,AUC-ROC,0.600599700149925,"sider__Respiratory, thoracic and mediastinal disorders__6.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6547837483617301,sider__Psychiatric disorders__6.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6044209072069997,sider__Renal and urinary disorders__6.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,6,AUC-ROC,0.6761363636363636,"sider__Pregnancy, puerperium and perinatal conditions__6.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.644140625,sider__Ear and labyrinth disorders__6.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.6938401048492792,sider__Cardiac disorders__6.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,6,AUC-ROC,0.5338129496402878,sider__Nervous system disorders__6.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,6,AUC-ROC,0.603515625,"sider__Injury, poisoning and procedural complications__6.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.767309205350118,sider__Hepatobiliary disorders__7.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.5792922673656619,sider__Metabolism and nutrition disorders__7.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,7,AUC-ROC,0.7570422535211268,sider__Product issues__7.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.7608695652173912,sider__Eye disorders__7.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,7,AUC-ROC,0.7660208643815201,sider__Investigations__7.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.6256630462237938,sider__Musculoskeletal and connective tissue disorders__7.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.7840073529411764,sider__Gastrointestinal disorders__7.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,7,AUC-ROC,0.6837894736842106,sider__Social circumstances__7.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.5923863636363637,sider__Immune system disorders__7.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.7140918782709827,sider__Reproductive system and breast disorders__7.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,7,AUC-ROC,0.6758467869578981,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__7.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,7,AUC-ROC,0.5958791208791208,sider__General disorders and administration site conditions__7.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.7385098487011132,sider__Endocrine disorders__7.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,7,AUC-ROC,0.5296442687747036,sider__Surgical and medical procedures__7.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.6763392857142857,sider__Vascular disorders__7.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.8175167224080268,sider__Blood and lymphatic system disorders__7.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.6548713235294118,sider__Skin and subcutaneous tissue disorders__7.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,7,AUC-ROC,0.5850129198966407,"sider__Congenital, familial and genetic disorders__7.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,7,AUC-ROC,0.530340909090909,sider__Infections and infestations__7.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,7,AUC-ROC,0.6347593582887701,"sider__Respiratory, thoracic and mediastinal disorders__7.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.7296703296703296,sider__Psychiatric disorders__7.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.6733619763694951,sider__Renal and urinary disorders__7.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,7,AUC-ROC,0.8213991769547324,"sider__Pregnancy, puerperium and perinatal conditions__7.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.586969111969112,sider__Ear and labyrinth disorders__7.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.737486573576799,sider__Cardiac disorders__7.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,7,AUC-ROC,0.7544191919191918,sider__Nervous system disorders__7.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,7,AUC-ROC,0.5296875,"sider__Injury, poisoning and procedural complications__7.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.6162532768703367,sider__Hepatobiliary disorders__8.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.4200555695882799,sider__Metabolism and nutrition disorders__8.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,8,AUC-ROC,0.6971830985915493,sider__Product issues__8.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.6745230078563413,sider__Eye disorders__8.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,8,AUC-ROC,0.6284877232142857,sider__Investigations__8.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.6441176470588236,sider__Musculoskeletal and connective tissue disorders__8.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.7186567164179105,sider__Gastrointestinal disorders__8.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,8,AUC-ROC,0.6029117898943763,sider__Social circumstances__8.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.6026862026862027,sider__Immune system disorders__8.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.7203947368421053,sider__Reproductive system and breast disorders__8.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,8,AUC-ROC,0.7522101540793129,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__8.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,8,AUC-ROC,0.5909090909090908,sider__General disorders and administration site conditions__8.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.620855614973262,sider__Endocrine disorders__8.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,8,AUC-ROC,0.5525335320417287,sider__Surgical and medical procedures__8.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.5913308913308913,sider__Vascular disorders__8.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.6493506493506493,sider__Blood and lymphatic system disorders__8.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.5092276144907724,sider__Skin and subcutaneous tissue disorders__8.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,8,AUC-ROC,0.6628679962013296,"sider__Congenital, familial and genetic disorders__8.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,8,AUC-ROC,0.6186779059449866,sider__Infections and infestations__8.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,8,AUC-ROC,0.5879060879060879,"sider__Respiratory, thoracic and mediastinal disorders__8.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.5763888888888888,sider__Psychiatric disorders__8.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.6806020066889632,sider__Renal and urinary disorders__8.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,8,AUC-ROC,0.732824427480916,"sider__Pregnancy, puerperium and perinatal conditions__8.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.5859133126934984,sider__Ear and labyrinth disorders__8.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.6088077336197637,sider__Cardiac disorders__8.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,8,AUC-ROC,0.7272388059701492,sider__Nervous system disorders__8.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,8,AUC-ROC,0.5970496894409938,"sider__Injury, poisoning and procedural complications__8.npy"
+sider,classification,Hepatobiliary disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.7410765965656956,sider__Hepatobiliary disorders__9.npy
+sider,classification,Metabolism and nutrition disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.703475935828877,sider__Metabolism and nutrition disorders__9.npy
+sider,classification,Product issues,TabPFN,ecfp4_2048,9,AUC-ROC,0.4988179669030732,sider__Product issues__9.npy
+sider,classification,Eye disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.7413687436159346,sider__Eye disorders__9.npy
+sider,classification,Investigations,TabPFN,ecfp4_2048,9,AUC-ROC,0.7056631892697467,sider__Investigations__9.npy
+sider,classification,Musculoskeletal and connective tissue disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.6957264957264957,sider__Musculoskeletal and connective tissue disorders__9.npy
+sider,classification,Gastrointestinal disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.6780587833219412,sider__Gastrointestinal disorders__9.npy
+sider,classification,Social circumstances,TabPFN,ecfp4_2048,9,AUC-ROC,0.6546199701937407,sider__Social circumstances__9.npy
+sider,classification,Immune system disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.608686115376179,sider__Immune system disorders__9.npy
+sider,classification,Reproductive system and breast disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.6559410738515217,sider__Reproductive system and breast disorders__9.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",TabPFN,ecfp4_2048,9,AUC-ROC,0.6971941638608306,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__9.npy"
+sider,classification,General disorders and administration site conditions,TabPFN,ecfp4_2048,9,AUC-ROC,0.6982323232323233,sider__General disorders and administration site conditions__9.npy
+sider,classification,Endocrine disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.7307486631016042,sider__Endocrine disorders__9.npy
+sider,classification,Surgical and medical procedures,TabPFN,ecfp4_2048,9,AUC-ROC,0.5907294286740927,sider__Surgical and medical procedures__9.npy
+sider,classification,Vascular disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.6363636363636364,sider__Vascular disorders__9.npy
+sider,classification,Blood and lymphatic system disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.7376915219611848,sider__Blood and lymphatic system disorders__9.npy
+sider,classification,Skin and subcutaneous tissue disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.655223880597015,sider__Skin and subcutaneous tissue disorders__9.npy
+sider,classification,"Congenital, familial and genetic disorders",TabPFN,ecfp4_2048,9,AUC-ROC,0.5979166666666667,"sider__Congenital, familial and genetic disorders__9.npy"
+sider,classification,Infections and infestations,TabPFN,ecfp4_2048,9,AUC-ROC,0.6781908595784987,sider__Infections and infestations__9.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",TabPFN,ecfp4_2048,9,AUC-ROC,0.6668911335578004,"sider__Respiratory, thoracic and mediastinal disorders__9.npy"
+sider,classification,Psychiatric disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.5981818181818181,sider__Psychiatric disorders__9.npy
+sider,classification,Renal and urinary disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.6578115117014548,sider__Renal and urinary disorders__9.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",TabPFN,ecfp4_2048,9,AUC-ROC,0.6261194029850746,"sider__Pregnancy, puerperium and perinatal conditions__9.npy"
+sider,classification,Ear and labyrinth disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.7097584541062802,sider__Ear and labyrinth disorders__9.npy
+sider,classification,Cardiac disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.7502170138888888,sider__Cardiac disorders__9.npy
+sider,classification,Nervous system disorders,TabPFN,ecfp4_2048,9,AUC-ROC,0.6026570048309179,sider__Nervous system disorders__9.npy
+sider,classification,"Injury, poisoning and procedural complications",TabPFN,ecfp4_2048,9,AUC-ROC,0.5885106382978723,"sider__Injury, poisoning and procedural complications__9.npy"

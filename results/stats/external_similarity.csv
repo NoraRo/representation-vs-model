@@ -1,0 +1,3 @@
+dataset,outside,n_outside,median_outside,n_moleculenet_test,median_moleculenet_test
+esol,aqsoldbc,6954,0.375,113,0.41666666
+lipophilicity,rtlogd_tdata,2668,0.29225773,420,0.53846157

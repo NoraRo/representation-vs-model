@@ -1,0 +1,35 @@
+dataset,kind,task,model,features,split,metric,value,pred_file
+esol,regression,logS,DGT,graph,det,RMSE,0.9310670471659088,esol__logS__det.npy
+freesolv,regression,dGhyd,DGT,graph,det,RMSE,2.6660385833324405,freesolv__dGhyd__det.npy
+lipophilicity,regression,logD,DGT,graph,det,RMSE,0.668682707044139,lipophilicity__logD__det.npy
+bbbp,classification,p_np,DGT,graph,det,AUC-ROC,0.7036805087195298,bbbp__p_np__det.npy
+bace,classification,Class,DGT,graph,det,AUC-ROC,0.8468297101449276,bace__Class__det.npy
+clintox,classification,FDA_APPROVED,DGT,graph,det,AUC-ROC,0.829736211031175,clintox__FDA_APPROVED__det.npy
+clintox,classification,CT_TOX,DGT,graph,det,AUC-ROC,0.8347826086956522,clintox__CT_TOX__det.npy
+sider,classification,Hepatobiliary disorders,DGT,graph,det,AUC-ROC,0.5660007833920877,sider__Hepatobiliary disorders__det.npy
+sider,classification,Metabolism and nutrition disorders,DGT,graph,det,AUC-ROC,0.5057823129251701,sider__Metabolism and nutrition disorders__det.npy
+sider,classification,Product issues,DGT,graph,det,AUC-ROC,0.5197841726618704,sider__Product issues__det.npy
+sider,classification,Eye disorders,DGT,graph,det,AUC-ROC,0.6215651135005973,sider__Eye disorders__det.npy
+sider,classification,Investigations,DGT,graph,det,AUC-ROC,0.6308888888888888,sider__Investigations__det.npy
+sider,classification,Musculoskeletal and connective tissue disorders,DGT,graph,det,AUC-ROC,0.6641873278236915,sider__Musculoskeletal and connective tissue disorders__det.npy
+sider,classification,Gastrointestinal disorders,DGT,graph,det,AUC-ROC,0.7682506887052342,sider__Gastrointestinal disorders__det.npy
+sider,classification,Social circumstances,DGT,graph,det,AUC-ROC,0.6213921901528014,sider__Social circumstances__det.npy
+sider,classification,Immune system disorders,DGT,graph,det,AUC-ROC,0.5829573934837092,sider__Immune system disorders__det.npy
+sider,classification,Reproductive system and breast disorders,DGT,graph,det,AUC-ROC,0.6782051282051282,sider__Reproductive system and breast disorders__det.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",DGT,graph,det,AUC-ROC,0.6481755424063117,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__det.npy"
+sider,classification,General disorders and administration site conditions,DGT,graph,det,AUC-ROC,0.7563976377952755,sider__General disorders and administration site conditions__det.npy
+sider,classification,Endocrine disorders,DGT,graph,det,AUC-ROC,0.5464187327823691,sider__Endocrine disorders__det.npy
+sider,classification,Surgical and medical procedures,DGT,graph,det,AUC-ROC,0.6171597633136094,sider__Surgical and medical procedures__det.npy
+sider,classification,Vascular disorders,DGT,graph,det,AUC-ROC,0.5361463133640553,sider__Vascular disorders__det.npy
+sider,classification,Blood and lymphatic system disorders,DGT,graph,det,AUC-ROC,0.6815261044176706,sider__Blood and lymphatic system disorders__det.npy
+sider,classification,Skin and subcutaneous tissue disorders,DGT,graph,det,AUC-ROC,0.7420924574209246,sider__Skin and subcutaneous tissue disorders__det.npy
+sider,classification,"Congenital, familial and genetic disorders",DGT,graph,det,AUC-ROC,0.6071428571428571,"sider__Congenital, familial and genetic disorders__det.npy"
+sider,classification,Infections and infestations,DGT,graph,det,AUC-ROC,0.5948844884488449,sider__Infections and infestations__det.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",DGT,graph,det,AUC-ROC,0.7006206152185644,"sider__Respiratory, thoracic and mediastinal disorders__det.npy"
+sider,classification,Psychiatric disorders,DGT,graph,det,AUC-ROC,0.5441176470588235,sider__Psychiatric disorders__det.npy
+sider,classification,Renal and urinary disorders,DGT,graph,det,AUC-ROC,0.6110774818401937,sider__Renal and urinary disorders__det.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",DGT,graph,det,AUC-ROC,0.5966386554621849,"sider__Pregnancy, puerperium and perinatal conditions__det.npy"
+sider,classification,Ear and labyrinth disorders,DGT,graph,det,AUC-ROC,0.5302746566791512,sider__Ear and labyrinth disorders__det.npy
+sider,classification,Cardiac disorders,DGT,graph,det,AUC-ROC,0.6834251606978881,sider__Cardiac disorders__det.npy
+sider,classification,Nervous system disorders,DGT,graph,det,AUC-ROC,0.7856550580431179,sider__Nervous system disorders__det.npy
+sider,classification,"Injury, poisoning and procedural complications",DGT,graph,det,AUC-ROC,0.5807038834951457,"sider__Injury, poisoning and procedural complications__det.npy"

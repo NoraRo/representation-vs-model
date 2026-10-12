@@ -1,0 +1,15 @@
+dataset,outside,square,verdict
+esol,aqsoldbc,rf_tabpfn_e2m,input
+esol,aqsoldbc,rf_catboost_e2m,input
+esol,aqsoldbc,cat_tabpfn_m2r,input
+esol,aqsoldbc,cat_tabpfn_e2r,input
+esol,aqsoldbc,cat_tabpfn_e2m,input
+esol,aqsoldbc,cat_tabfm_m2r,input
+esol,aqsoldbc,pfn_tabfm_m2r,input
+lipophilicity,rtlogd_tdata,rf_tabpfn_e2m,input
+lipophilicity,rtlogd_tdata,rf_catboost_e2m,input
+lipophilicity,rtlogd_tdata,cat_tabpfn_m2r,input
+lipophilicity,rtlogd_tdata,cat_tabpfn_e2r,input
+lipophilicity,rtlogd_tdata,cat_tabpfn_e2m,input
+lipophilicity,rtlogd_tdata,cat_tabfm_m2r,input
+lipophilicity,rtlogd_tdata,pfn_tabfm_m2r,input

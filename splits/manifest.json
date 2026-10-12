@@ -1,0 +1,350 @@
+{
+ "rdkit": "2026.03.5",
+ "files": {
+  "esol_rows.csv": "a653d6015f808768391069ef008cda013f322363aa73054e03763f8e4ec0869b",
+  "esol_rdkit2d.npy": "80e886208fda7151d47b2b69b5d22365107b64c9f6640a32944af45149b3aa21",
+  "esol_ecfp4_2048.npy": "3bd9fc27fd5168d9ae637a5b64f5b449d09e37158b84cdcbc3bfa3f2fa03d04b",
+  "esol_maccs.npy": "00fae7b3194b62f10fc246a571b2256e7cca1426324d19651d5176cf0f845d1c",
+  "esol_splits.json": "c83cd28eab4b223e03c27d5b3007aea0c1e268b5d7ad9da36a5c7c667ebefab8",
+  "freesolv_rows.csv": "6a023be98bc322e56d15634809acbf752d326fb409c43afdecb03f7ea1f97e38",
+  "freesolv_rdkit2d.npy": "663911019cd6ad8ee59a2fff4ee4f976d6acdbfeabcae787ceb19564c5bc0ffd",
+  "freesolv_ecfp4_2048.npy": "4e80cf916fe495ed9db89d60dd2462138573a03eacdd3e032378b70dd7e68d37",
+  "freesolv_maccs.npy": "0dc9d6dbcd6751aff9af995c393eff1d4b232efc3b963bdcd6f59d2c1511ef45",
+  "freesolv_splits.json": "d6f88b5e1187c0b90ecd9ba5bdc4f9c6bae539f4cbd0738585c5286704bc65db",
+  "lipophilicity_rows.csv": "ac5a62b5c56f6779d60f5feeba7d56e2824e0f99f1344c87ca321940e53461ef",
+  "lipophilicity_rdkit2d.npy": "71c9a4ae72961f8fb0fcf88289d4698dd11a0928ce970785f913c1e837343939",
+  "lipophilicity_ecfp4_2048.npy": "494531fa50b7e20aa43606bff6dd756021080587406f07f6cbe092f8b9df256d",
+  "lipophilicity_maccs.npy": "f00272942690aec8b0eae891db90cd806e13046de67ed4a51e27bf17ca636c2a",
+  "lipophilicity_splits.json": "1f76cab48ca1d9a36634785c57acf12ae31461dc7e57f82da79dbb9f114c7e96",
+  "bbbp_rows.csv": "b861f9b58230d785ef15beac9d28a1a0cd9e4f403d1268aa7dfb21a892f3c9f7",
+  "bbbp_rdkit2d.npy": "2069716c4ec85140285ac98b540da09840ba0dbb2b9ae0c2610e12aa9932e80a",
+  "bbbp_ecfp4_2048.npy": "625d826da42af9157610ab251b76751d32f739a79b5d0048ea99256df263ff9a",
+  "bbbp_maccs.npy": "015db9fb29fa2655cc100bc7c68eedf3ef91b72441c1ddaf6b3b77f165d4cd16",
+  "bbbp_splits.json": "2dd2b0f013a0c2485522f7d400dd52625a45fbebd51bfb2d8bfe1fddb440901c",
+  "bace_rows.csv": "5fec10aff5a3c85a45e27df612c5b9cc9eb17c5578d691a962c11a24fae05918",
+  "bace_rdkit2d.npy": "56d71dcec2483df8bd578b90daf7979a2b992a5da539069af7d67f2206f6264a",
+  "bace_ecfp4_2048.npy": "c36279991c4fe02379d1a90430e8fcf35909c6fc7871c3475d2c95c5298a87b8",
+  "bace_maccs.npy": "620e7eeebc55a8b1cd6b0d1b52a9f0a77300e91c5089daf14c75d6fbd220f522",
+  "bace_splits.json": "545df4c5076d91393a5402a2dd96088d142a9da65bf94039da8e9b1047348340",
+  "clintox_rows.csv": "208cffd6f4b64338a09b8590729f9ab8f790725f4f12c075a415f447bc58a219",
+  "clintox_rdkit2d.npy": "0acc52ba9fdd51694262e4d69a5bba233ef4dd4e1462fe7ca7a97e03e1b67b1f",
+  "clintox_ecfp4_2048.npy": "5298669bf97a5532a3c4e625de9c8acd6d866b912f801c2610bce464f50925d4",
+  "clintox_maccs.npy": "ad58e76d4b5ac215b0ddc95294bfa9f0d57b5a93e2000a118561898fda45c207",
+  "clintox_splits.json": "80250d5f3194842c4fe57b7888534202f6d216262a90c52bd55acd19c15980f3",
+  "sider_rows.csv": "c7c7aa151f9f30934725d7ffe8c5aa599a06ec8ae5e02d1c04de22a5530548bc",
+  "sider_rdkit2d.npy": "1fe1c8e7bc4a829d0df899d2ca358322dcbbc1426e781e92d403de2ff07da1ca",
+  "sider_ecfp4_2048.npy": "d99c14d9841948d46e79bd3998bb10a486f42d0b4b098fb46a05e55a86612a52",
+  "sider_maccs.npy": "0f34fd95e20c5a63251ff76fede7c69470cf10e7ebcaa0c7b3a54eb2a1ce1fef",
+  "sider_splits.json": "06b157fad279953db0c81cc7d969b0ba4aa89751bca1c2d444d97b23d5c3c2f9"
+ },
+ "splits": {
+  "esol/det": {
+   "n_train_valid": 1015,
+   "n_test": 113
+  },
+  "esol/0": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/1": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/2": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/3": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/4": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/5": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/6": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/7": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/8": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "esol/9": {
+   "n_train_valid": 1014,
+   "n_test": 114
+  },
+  "freesolv/det": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/0": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/1": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/2": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/3": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/4": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/5": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/6": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/7": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/8": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "freesolv/9": {
+   "n_train_valid": 577,
+   "n_test": 65
+  },
+  "lipophilicity/det": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/0": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/1": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/2": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/3": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/4": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/5": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/6": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/7": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/8": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "lipophilicity/9": {
+   "n_train_valid": 3780,
+   "n_test": 420
+  },
+  "bbbp/det": {
+   "n_train_valid": 1835,
+   "n_test": 204
+  },
+  "bbbp/0": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/1": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/2": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/3": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/4": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/5": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/6": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/7": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/8": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bbbp/9": {
+   "n_train_valid": 1834,
+   "n_test": 205
+  },
+  "bace/det": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/0": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/1": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/2": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/3": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/4": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/5": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/6": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/7": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/8": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "bace/9": {
+   "n_train_valid": 1361,
+   "n_test": 152
+  },
+  "clintox/det": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/0": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/1": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/2": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/3": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/4": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/5": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/6": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/7": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/8": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "clintox/9": {
+   "n_train_valid": 1332,
+   "n_test": 148
+  },
+  "sider/det": {
+   "n_train_valid": 1284,
+   "n_test": 143
+  },
+  "sider/0": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/1": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/2": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/3": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/4": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/5": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/6": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/7": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/8": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  },
+  "sider/9": {
+   "n_train_valid": 1283,
+   "n_test": 144
+  }
+ }
+}

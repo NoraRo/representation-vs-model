@@ -49,10 +49,10 @@ manifest in this repository exactly.
 
 ```
 python src/identity_audit.py    # results/identity/
-python src/stats.py             # comparisons, squares, sign tests, leak sensitivity
-python src/extra_squares.py     # the 7 other squares
+python src/stats.py             # comparisons, factorial designs, sign tests, leak sensitivity
+python src/extra_squares.py     # the 7 other factorial designs
 python src/variance_decomp.py   # two-way analysis of variance of the seeded scores
-python src/similarity_check.py  # near and far halves of each test set
+python src/similarity_check.py  # high- and low-similarity halves of each test set
 ```
 
 Each writes CSV files to `results/stats/`. Run them in this order; `stats.py` must run before
@@ -60,12 +60,12 @@ the last three.
 
 | File in `results/stats/` | Supplement |
 |---|---|
-| `parts_det.csv`, `parts_seeded.csv`, `extra_squares_*.csv` | S3 All squares |
-| `leak_sensitivity.csv` (with `results/identity/`) | S2 Same molecule on both sides of the split |
-| `variance_*.csv` | S4 Whole-grid analysis of variance |
-| `similarity_*.csv` | S5 Near and far test molecules |
-| `comparisons_*.csv`, `signtest.csv`, `dataset_scores.csv` | S6 Model comparisons and graph models |
-| `external_*.csv` | S1 Data and tests, and the external-dataset results |
+| `parts_det.csv`, `parts_seeded.csv`, `extra_squares_*.csv` | S3 Results for all factorial designs |
+| `leak_sensitivity.csv` (with `results/identity/`) | S2 Molecular identity check across splits |
+| `variance_*.csv` | S4 Full factorial analysis of variance |
+| `similarity_*.csv` | S5 High- and low-similarity test molecules |
+| `comparisons_*.csv`, `signtest.csv`, `dataset_scores.csv` | S6 Model comparisons and DGT reproduction |
+| `external_*.csv` | S1 Datasets and statistical tests, and the external-dataset results |
 
 ## 4. Training
 

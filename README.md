@@ -1,19 +1,26 @@
 # Representation and Model Contributions on Small Molecular Benchmarks
 
-Code, split files, saved predictions and statistics for the paper *Representation and Model
-Contributions on Small Molecular Benchmarks: Controlled Comparisons and External Evaluation*.
-The supplementary material (S1–S7) is `docs/supplement.pdf`.
+This repository belongs to the paper *Representation and Model Contributions on Small Molecular
+Benchmarks: Controlled Comparisons and External Evaluation*. The paper asks how much of a model's
+accuracy on small molecular datasets comes from the model and how much from the molecular
+representation. It separates the two with a two-by-two factorial design: a random forest and a
+second model (CatBoost or a tabular foundation model) are each trained on a fingerprint and on RDKit
+descriptors. It also compares them with published graph models, Chemprop and the graph transformer
+DGT. Seven MoleculeNet datasets are evaluated on the published split and on ten more scaffold
+splits, and the findings are tested on external datasets.
 
-The saved predictions are enough to recompute every statistic without training a model
-(step 3 below). Retraining is described in step 4.
+Everything needed to check the results is here: the code, the splits, each model's saved
+predictions and the statistics. Every number can be recomputed from the saved predictions without
+training a model. Retraining is optional. The supplementary material (S1–S7) is
+`docs/supplement.pdf`.
 
 ## Contents
 
 | Folder | What it holds |
 |---|---|
 | `src/` | All code (listed below) |
-| `splits/` | `{dataset}_splits.json`: training, validation and test row indices of the published split (`det`) and the 10 seeded scaffold splits (`0`–`9`); `manifest.json`: sha256 of every rebuilt file, RDKit version and split sizes |
-| `predictions/` | One folder per model and representation (e.g. `tabfm_maccs/`): `raw_results.csv` (one line per dataset, task and split, with the test score) and `{dataset}__{task}__{split}.npy` (test row index, prediction); `dgt_graph/seeds/` holds the DGT runs with seeds 1–3 |
+| `splits/` | Training, validation and test row indices per dataset: the published split (`det`) and the 10 seeded scaffold splits (`0`–`9`). `manifest.json` holds file hashes, the RDKit version and the split sizes |
+| `predictions/` | One folder per model and representation (e.g. `tabfm_maccs/`): `raw_results.csv` with the test scores and one `.npy` file per dataset, task and split (test row index, prediction). `dgt_graph/seeds/` holds DGT seeds 1–3 |
 | `results/stats/` | Every statistic in the paper and the supplement, as CSV |
 | `results/identity/` | Test molecules that also occur in training (by InChIKey or tautomer), and duplicates inside each dataset |
 | `results/external/` | Predictions for the external datasets (no labels) and `gate.csv`, the check that the refitted models reproduce the saved MoleculeNet predictions |

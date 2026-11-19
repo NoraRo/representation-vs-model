@@ -1,25 +1,27 @@
-"""Train Chemprop (D-MPNN, library default settings) and save its test predictions.
+"""Train Chemprop (D-MPNN) and save its test predictions.
 
 Same rows and splits as the tabular models. Three variants:
 
-  plain    trained on the training rows, Chemprop picks the best epoch on the validation rows;
-           also writes best_epochs.csv (0-based, read from the checkpoint name).
-  --refit  trained once on training + validation rows for (best epoch + 1) epochs of the plain
-           run, without validation; the test rows are predicted with the last checkpoint.
+  plain    4 settings (batch normalisation and dropout on or off, everything else at Chemprop's
+           defaults), each trained on the training rows with the best epoch chosen on the
+           validation rows. The setting with the best mean validation score predicts the test
+           rows. best_epochs.csv holds every setting's best epoch (0-based) and validation score.
+  --refit  the winning setting, trained once on training + validation rows for (its best epoch
+           + 1) epochs, without validation; the test rows are predicted with the last checkpoint.
            Needs the plain run first.
-  --descriptors rdkit2d
-           the plain variant with each molecule's RDKit descriptor vector as extra input:
-           cleaned on the training rows (clean.py), then a quantile transform fitted on the
-           training rows maps each column to [0, 1]; Chemprop's own descriptor scaling stays on.
+  --descriptors rdkit2d | rdkit2d_214
+           the plain variant with each molecule's descriptor vector as extra input: cleaned on
+           the training rows (clean.py), then a quantile transform fitted on the training rows
+           maps each column to [0, 1]; Chemprop's own descriptor scaling stays on.
 
 ClinTox (2 tasks) and SIDER (27 tasks) are trained multi-task. Seed per split: published split
--> 0, seeded split k -> k. CPU only, one thread, no data-loader workers, so that runs repeat.
-Writes predictions/<chemprop variant>/{dataset}__{task}__{split}.npy (test row index, prediction)
-and raw_results.csv; datasets and splits already there are skipped.
+-> 0, seeded split k -> k. One thread and no data-loader workers, so that runs repeat.
+Writes predictions/<chemprop variant>/{dataset}__{task}__{split}.npy (test row index,
+prediction) and raw_results.csv; datasets and splits already there are skipped.
 
-  OMP_NUM_THREADS=1 python src/train_chemprop.py
-  OMP_NUM_THREADS=1 python src/train_chemprop.py --refit
-  OMP_NUM_THREADS=1 python src/train_chemprop.py --descriptors rdkit2d
+  OMP_NUM_THREADS=1 python src/train_chemprop.py --accelerator gpu
+  OMP_NUM_THREADS=1 python src/train_chemprop.py --accelerator gpu --refit
+  OMP_NUM_THREADS=1 python src/train_chemprop.py --accelerator gpu --descriptors rdkit2d
 """
 
 from __future__ import annotations
@@ -45,6 +47,12 @@ from train_tabular import COLUMNS, KIND  # noqa: E402
 import paths as PT  # noqa: E402
 
 WARMUP_EPOCHS = 2  # Chemprop's default; it refuses to train for fewer than WARMUP_EPOCHS + 1 epochs
+SETTINGS = {
+    "default": [],
+    "bn": ["--batch-norm"],
+    "dropout": ["--dropout", "0.2"],
+    "bn_dropout": ["--batch-norm", "--dropout", "0.2"],
+}
 
 
 def run(cmd: list[str], log: pathlib.Path) -> None:
@@ -90,12 +98,47 @@ def descriptor_width(ckpt: pathlib.Path) -> int:
     return int(model.predictor.input_dim - model.message_passing.output_dim)
 
 
+def read_preds(csv: pathlib.Path, rows: pd.DataFrame, idx: np.ndarray, tasks: list[str],
+               where: str, refit: bool) -> pd.DataFrame:
+    """Predictions of one part, one column per task, in the order of idx."""
+    preds = pd.read_csv(csv)
+    if len(preds) != len(idx):
+        raise RuntimeError(f"{where}: {len(preds)} predictions for {len(idx)} rows")
+    if list(preds.smiles) != list(rows.smiles.iloc[idx]):
+        raise RuntimeError(f"{where}: prediction rows are not in order")
+    # predicting from a .ckpt keeps the true targets and adds pred_0..pred_{k-1}; from a
+    # .pt the targets are replaced by predictions. Normalise to one column per task.
+    pcols = [f"pred_{i}" for i in range(len(tasks))]
+    if all(c in preds.columns for c in pcols):
+        preds = preds[["smiles"] + pcols].set_axis(["smiles"] + tasks, axis=1)
+    elif refit:
+        raise RuntimeError(f"{where}: refit predictions lack {pcols}: {list(preds.columns)}")
+    for task in tasks:
+        if np.allclose(preds[task].to_numpy(float), rows[task].to_numpy(float)[idx], equal_nan=True):
+            raise RuntimeError(f"{where}/{task}: predictions equal the true values")
+    return preds
+
+
+def validation_score(kind: str, rows: pd.DataFrame, tasks: list[str], va: np.ndarray,
+                     preds: pd.DataFrame) -> float:
+    """Mean over tasks of -RMSE or ROC-AUC on the validation rows (higher is better)."""
+    scores = []
+    for t in tasks:
+        y, p = rows[t].to_numpy(float)[va], preds[t].to_numpy(float)
+        scores.append(-M.rmse(y, p) if kind == "regression" else M.auc(y, p))
+    scores = [v for v in scores if not np.isnan(v)]
+    if not scores:
+        raise RuntimeError("no task gives a validation score")
+    return float(np.mean(scores))
+
+
 def fit_predict(name: str, sp: str, rows: pd.DataFrame, tasks: list[str], s: dict,
-                work: pathlib.Path, refit_epochs: int | None = None,
-                X_desc: np.ndarray | None = None) -> tuple[np.ndarray, pd.DataFrame, int | None]:
-    """Train and predict one dataset and split. Returns the test rows, one prediction column per
-    task, and the best epoch (plain and descriptor variants only)."""
+                work: pathlib.Path, setting: str, accelerator: str,
+                refit_epochs: int | None = None, X_desc: np.ndarray | None = None) -> dict:
+    """Train one setting on one dataset and split. Returns the test predictions (one column per
+    task), the best epoch and the validation score (plain and descriptor variants only)."""
     kind = KIND[name]
+    work.mkdir(parents=True)
     desc = descriptor_frames(X_desc, s) if X_desc is not None else None
     dcols = list(desc["train"].columns) if desc is not None else []
     paths = {}
@@ -113,10 +156,11 @@ def fit_predict(name: str, sp: str, rows: pd.DataFrame, tasks: list[str], s: dic
     common = ["--smiles-columns", "smiles", "--target-columns", *tasks,
               "-t", "regression" if kind == "regression" else "classification",
               "--pytorch-seed", seed, "--data-seed", seed,
-              "--num-workers", "0", "--accelerator", "cpu", "--output-dir", str(out_dir), *dflag]
+              "--num-workers", "0", "--accelerator", accelerator, "--output-dir", str(out_dir),
+              *dflag, *SETTINGS[setting]]
     if refit_epochs is None:
-        run([chemprop, "train", "--data-path", str(paths["train"]), str(paths["val"]), str(paths["test"]),
-             *common], log)
+        run([chemprop, "train", "--data-path", str(paths["train"]), str(paths["val"]),
+             str(paths["test"]), *common], log)
         ckpts = sorted(out_dir.rglob("best*.pt")) or sorted(out_dir.rglob("*.ckpt"))
         epoch = best_epoch(out_dir)
     else:
@@ -131,52 +175,47 @@ def fit_predict(name: str, sp: str, rows: pd.DataFrame, tasks: list[str], s: dic
     width = descriptor_width(ckpts[0])
     if width != len(dcols):
         raise RuntimeError(f"{name}/{sp}: model descriptor width {width}, expected {len(dcols)}")
-    pred_csv = work / "test_preds.csv"
-    run([chemprop, "predict", "--test-path", str(paths["test"]), "--smiles-columns", "smiles",
-         "--model-path", str(ckpts[0]), "--preds-path", str(pred_csv),
-         "--num-workers", "0", "--accelerator", "cpu", *dflag], log)
-    preds = pd.read_csv(pred_csv)
+
+    def predict(part: str, idx: np.ndarray) -> pd.DataFrame:
+        csv = work / f"{part}_preds.csv"
+        run([chemprop, "predict", "--test-path", str(paths[part]), "--smiles-columns", "smiles",
+             "--model-path", str(ckpts[0]), "--preds-path", str(csv),
+             "--num-workers", "0", "--accelerator", accelerator, *dflag], log)
+        return read_preds(csv, rows, idx, tasks, f"{name}/{sp}/{setting}/{part}", refit_epochs is not None)
+
+    score = float("nan")
+    if refit_epochs is None:
+        va = np.array(s["valid"])
+        score = validation_score(kind, rows, tasks, va, predict("val", va))
     te = np.array(s["test"])
-    if len(preds) != len(te):
-        raise RuntimeError(f"{name}/{sp}: {len(preds)} predictions for {len(te)} test rows")
-    if list(preds.smiles) != list(rows.smiles.iloc[te]):
-        raise RuntimeError(f"{name}/{sp}: prediction rows are not in test order")
-    # predicting from a .ckpt keeps the true targets and adds pred_0..pred_{k-1}; from a
-    # .pt the targets are replaced by predictions. Normalise to one column per task.
-    pcols = [f"pred_{i}" for i in range(len(tasks))]
-    if all(c in preds.columns for c in pcols):
-        preds = preds[["smiles"] + pcols].set_axis(["smiles"] + tasks, axis=1)
-    elif refit_epochs is not None:
-        raise RuntimeError(f"{name}/{sp}: refit predictions lack {pcols}: {list(preds.columns)}")
-    for task in tasks:
-        if np.allclose(preds[task].to_numpy(float), rows[task].to_numpy(float)[te], equal_nan=True):
-            raise RuntimeError(f"{name}/{sp}/{task}: predictions equal the true values")
-    return te, preds, epoch
+    return {"te": te, "preds": predict("test", te), "epoch": epoch, "score": score}
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--datasets", nargs="+", default=list(KIND))
     ap.add_argument("--splits", nargs="+", default=["det"] + [str(i) for i in range(10)])
+    ap.add_argument("--accelerator", choices=["cpu", "gpu"], default="cpu")
     ap.add_argument("--refit", action="store_true",
-                    help="train on training + validation rows for the plain run's best epochs")
-    ap.add_argument("--descriptors", choices=["rdkit2d"], default=None,
-                    help="add the cleaned, quantile-transformed rdkit2d vector as extra input")
+                    help="train the winning setting on training + validation rows for its best epoch + 1")
+    ap.add_argument("--descriptors", choices=["rdkit2d", "rdkit2d_214"], default=None,
+                    help="add the cleaned, quantile-transformed descriptor vector as extra input")
     args = ap.parse_args()
     if args.descriptors and args.refit:
         raise SystemExit("--descriptors and --refit cannot be combined")
     if os.environ.get("OMP_NUM_THREADS") != "1":
         raise SystemExit("set OMP_NUM_THREADS=1")
     model_name = "ChempropRefit" if args.refit else "ChempropDesc" if args.descriptors else "Chemprop"
-    feat_name = "graph+rdkit2d" if args.descriptors else "graph"
+    feat_name = f"graph+{args.descriptors}" if args.descriptors else "graph"
     out = PT.arm_dir(model_name, feat_name)
-    epochs = None
+    winners = None
     if args.refit:
         be = PT.arm_dir("Chemprop", "graph") / "best_epochs.csv"
         if not be.exists():
             raise SystemExit(f"{be} is missing: run the plain variant first")
-        e = pd.read_csv(be, dtype={"split": str})
-        epochs = {(r.dataset, r.split): int(r.best_epoch) + 1 for r in e.itertuples()}
+        e = pd.read_csv(be, dtype={"split": str}).drop_duplicates(["dataset", "split", "config"], keep="last")
+        best = e.loc[e.groupby(["dataset", "split"]).score.idxmax()]
+        winners = {(r.dataset, r.split): (r.config, int(r.best_epoch) + 1) for r in best.itertuples()}
 
     out.mkdir(parents=True, exist_ok=True)
     raw = out / "raw_results.csv"
@@ -198,17 +237,23 @@ def main() -> int:
         for sp in args.splits:
             if (name, sp) in done:
                 continue
-            n_ep = None
-            if epochs is not None:
-                if (name, sp) not in epochs:
-                    raise RuntimeError(f"{name}/{sp}: no best epoch in the plain run")
-                n_ep = max(epochs[(name, sp)], WARMUP_EPOCHS + 1)
             with tempfile.TemporaryDirectory() as tmp:
-                te, preds, ep = fit_predict(name, sp, rows, tasks, splits[sp], pathlib.Path(tmp), n_ep, X_desc)
-            if ep is not None and model_name == "Chemprop":
-                be = out / "best_epochs.csv"
-                pd.DataFrame([dict(dataset=name, split=sp, best_epoch=ep)]).to_csv(
-                    be, mode="a", header=not be.exists(), index=False)
+                work = pathlib.Path(tmp)
+                if winners is None:
+                    results = {c: fit_predict(name, sp, rows, tasks, splits[sp], work / c, c,
+                                              args.accelerator, None, X_desc) for c in SETTINGS}
+                    be = out / "best_epochs.csv"
+                    pd.DataFrame([dict(dataset=name, split=sp, config=c, best_epoch=r["epoch"],
+                                       score=r["score"]) for c, r in results.items()]
+                                 ).to_csv(be, mode="a", header=not be.exists(), index=False)
+                    res = max(results.values(), key=lambda r: r["score"])
+                else:
+                    if (name, sp) not in winners:
+                        raise RuntimeError(f"{name}/{sp}: no best setting in the plain run")
+                    setting, n_ep = winners[(name, sp)]
+                    res = fit_predict(name, sp, rows, tasks, splits[sp], work / setting, setting,
+                                      args.accelerator, max(n_ep, WARMUP_EPOCHS + 1), X_desc)
+            te, preds = res["te"], res["preds"]
             out_rows = []
             for task in tasks:
                 y, p = rows[task].to_numpy(float)[te], preds[task].to_numpy(float)

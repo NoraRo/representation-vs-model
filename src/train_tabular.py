@@ -10,6 +10,8 @@ skipped, so an interrupted run can be restarted.
   OMP_NUM_THREADS=1 python src/train_tabular.py --models TabPFN --features rdkit2d ecfp4_2048 maccs --device mps
   OMP_NUM_THREADS=1 python src/train_tabular.py --models TabFM --features rdkit2d maccs --device cuda
 
+The extra inputs morgan512 and rdkit2d_214 are listed after --features in the same way.
+
 TabFM and TabPFN weights are read from models/ (see README.md).
 """
 
@@ -27,6 +29,7 @@ import pandas as pd
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import clean as F  # noqa: E402
+import featurize as FE  # noqa: E402
 import models as M  # noqa: E402
 import paths as PT  # noqa: E402
 
@@ -41,7 +44,6 @@ TABPFN_CKPT = {
     "regression": PT.MODELS / "tabpfn" / "tabpfn-v3-regressor-v3_default.ckpt",
 }
 N_ESTIMATORS = 8  # ensemble members of TabFM and TabPFN
-CATBOOST_THREADS = 6
 
 COLUMNS = ["dataset", "kind", "task", "model", "features", "split", "metric", "value", "pred_file"]
 
@@ -65,20 +67,11 @@ def fit_predict(model: str, kind: str, Xc, yc, Xva, yva, Xte, seed: int, device:
     """Return test predictions (regression values or P(class 1))."""
     if model == "RF":
         return M.run_rf(Xc, yc, Xva, yva, Xte, kind, seed=seed)
-    # every other model is trained on (or reads as context) the training and validation rows
+    if model == "CatBoost":
+        return M.run_catboost(Xc, yc, Xva, yva, Xte, kind, seed=seed)
+    # TabFM, TabFM+ and TabPFN read the training and validation rows as context
     X = np.vstack([Xc, Xva])
     y = np.concatenate([yc, yva])
-    if model == "CatBoost":
-        # library defaults, no early stopping, fixed thread count for repeatable results
-        from catboost import CatBoostClassifier, CatBoostRegressor
-
-        cls = CatBoostRegressor if kind == "regression" else CatBoostClassifier
-        est = cls(random_seed=seed, thread_count=CATBOOST_THREADS, verbose=0,
-                  allow_writing_files=False)
-        est.fit(X, y)
-        if kind == "regression":
-            return np.asarray(est.predict(Xte), dtype=float)
-        return np.asarray(est.predict_proba(Xte), dtype=float)[:, 1]
     if model in ("TabFM", "TabFMplus"):
         from tabfm import TabFMClassifier, TabFMRegressor
 
@@ -131,7 +124,7 @@ def check_not_collapsed(pred: np.ndarray, Xte: np.ndarray, where: str) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", nargs="+", required=True, choices=["TabFM", "TabFMplus", "RF", "TabPFN", "CatBoost"])
-    ap.add_argument("--features", nargs="+", required=True, choices=["rdkit2d", "ecfp4_2048", "maccs"])
+    ap.add_argument("--features", nargs="+", required=True, choices=list(FE.FEATURIZERS))
     ap.add_argument("--datasets", nargs="+", default=list(KIND))
     ap.add_argument("--splits", nargs="+", default=["det"] + [str(i) for i in range(10)])
     ap.add_argument("--device", default="cpu", help="cpu, cuda or mps (used by TabFM and TabPFN)")

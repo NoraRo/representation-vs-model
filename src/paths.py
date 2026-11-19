@@ -31,8 +31,9 @@ def arm_dirs() -> list[str]:
 _MODEL_DIR = {"RF": "rf", "CatBoost": "catboost", "TabPFN": "tabpfn", "TabFM": "tabfm",
               "TabFMplus": "tabfmplus", "Chemprop": "chemprop", "ChempropRefit": "chemprop_refit",
               "ChempropDesc": "chemprop", "DGT": "dgt"}
-_FEAT_DIR = {"rdkit2d": "rdkit2d", "ecfp4_2048": "ecfp4", "maccs": "maccs", "graph": "graph",
-             "graph+rdkit2d": "graph_rdkit2d"}
+_FEAT_DIR = {"rdkit2d": "rdkit2d", "rdkit2d_214": "rdkit2d_214", "ecfp4_2048": "ecfp4",
+             "morgan512": "morgan512", "maccs": "maccs", "graph": "graph", "graph+rdkit2d": "graph_rdkit2d",
+             "graph+rdkit2d_214": "graph_rdkit2d_214"}
 
 
 def arm_dir(model: str, features: str) -> pathlib.Path:

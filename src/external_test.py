@@ -8,23 +8,24 @@ Four stages, each its own command:
               the training rows, remove every molecule also in the MoleculeNet dataset (InChIKey,
               its first block, or canonical tautomer), merge duplicates whose labels differ by at most
               DUP_TOL (drop the others), check the label range;
-              compute the 3 representations. Needs RDKit 2026.03.5, as used for the MoleculeNet
+              compute the 5 representations. Needs RDKit 2026.03.5, as used for the MoleculeNet
               features.
   predict     fit each model as train_tabular.py does (training + validation rows of the
               published split) and predict the MoleculeNet test rows and the external rows in
               one call. The MoleculeNet predictions must match the saved ones (exact for RF and
               CatBoost, within 1e-5 otherwise, or within 1e-3 test RMSE), else the run stops;
               results/external/gate.csv records this. External predictions are saved without labels.
-  stats       join the external labels: square quantities and verdicts for all 12 squares, a joint
-              scaffold-cluster bootstrap (seed 3), Holm across the 2 datasets.
+  stats       join the external labels: square quantities and verdicts for every square of
+              extra_squares.py, a joint scaffold-cluster bootstrap (seed 3), Holm across the 2
+              datasets.
   similarity  median maximum ECFP4 similarity of the external rows and of the published test
               rows to the training + validation rows (no labels).
 
   OMP_NUM_THREADS=1 python src/external_test.py rows
-  OMP_NUM_THREADS=1 python src/external_test.py predict --models RF CatBoost --features rdkit2d ecfp4_2048 maccs --sets esol lipophilicity --device cpu
-  OMP_NUM_THREADS=1 python src/external_test.py predict --models TabPFN --features rdkit2d ecfp4_2048 maccs --sets esol lipophilicity --device mps
-  OMP_NUM_THREADS=1 python src/external_test.py predict --models TabFM --features rdkit2d maccs --sets esol --device mps
-  OMP_NUM_THREADS=6 python src/external_test.py predict --models TabFM --features rdkit2d maccs --sets lipophilicity --device cpu
+  OMP_NUM_THREADS=1 python src/external_test.py predict --models RF CatBoost --features rdkit2d rdkit2d_214 ecfp4_2048 morgan512 maccs --sets esol lipophilicity --device cpu
+  OMP_NUM_THREADS=1 python src/external_test.py predict --models TabPFN --features rdkit2d rdkit2d_214 ecfp4_2048 morgan512 maccs --sets esol lipophilicity --device mps
+  OMP_NUM_THREADS=1 python src/external_test.py predict --models TabFM --features rdkit2d rdkit2d_214 morgan512 maccs --sets esol --device mps
+  OMP_NUM_THREADS=6 python src/external_test.py predict --models TabFM --features rdkit2d rdkit2d_214 morgan512 maccs --sets lipophilicity --device cpu
   OMP_NUM_THREADS=1 python src/external_test.py stats
   OMP_NUM_THREADS=1 python src/external_test.py similarity
 
@@ -63,7 +64,7 @@ SETS = {
     "esol": ("aqsoldbc", SEARCH / "raw/llompart/AqSolDBc.csv", "SmilesCurated", "ExperimentalLogS", (-15.0, 3.0)),
     "lipophilicity": ("rtlogd_tdata", SEARCH / "raw/rtlogd/T-data_chembl32.csv", "smiles", "standard_value", (-5.0, 8.0)),
 }
-FEATS = ["rdkit2d", "ecfp4_2048", "maccs"]
+FEATS = ["rdkit2d", "rdkit2d_214", "ecfp4_2048", "morgan512", "maccs"]
 DUP_TOL = 0.5
 GATE_TOL, GATE_RMSE_TOL = 1e-5, 1e-3
 BOOT_SEED_EXT = 3
@@ -244,6 +245,13 @@ X_KEEP = ["input_ref", "input_cmp", "model_start", "model_end", "input_avg", "mo
           "input_minus_model", "interaction"]
 
 
+def square_group(sq: str) -> str:
+    """main = the 5 main designs, other = the 7 other designs on ecfp4_2048, maccs and rdkit2d,
+    extra_input_designs = the 36 designs that involve rdkit2d_214 or morgan512."""
+    import extra_squares as X
+    return "main" if sq in X.MAIN else "other" if sq in X.NEW else "extra_input_designs"
+
+
 def verdict_end(q: dict, sq: str) -> str:
     """similarity_check.verdict for squares whose end representation is not always rdkit2d."""
     ir, ic, ms, me = (q[(sq, k)] for k in ("input_ref", "input_cmp", "model_start", "model_end"))
@@ -268,7 +276,7 @@ def stage_stats() -> int:
     rng = np.random.default_rng(BOOT_SEED_EXT)
     ref_det = pd.read_csv(S.OUT / "parts_det.csv").set_index(["square", "quantity", "dataset"]).est
     part_rows, verdicts, scores = [], [], []
-    x_rows, x_verdicts = [], []  # the 7 other squares, scored on the same bootstrap draws
+    x_rows, x_verdicts = [], []  # every square of extra_squares.py, scored on the same bootstrap draws
     for mn, (name, *_rest) in SETS.items():
         rows = pd.read_csv(EXT_ROWS / f"{name}_rows.csv")
         if "smiles" not in rows:  # T-data: SMILES kept local
@@ -298,9 +306,10 @@ def stage_stats() -> int:
             verdicts.append(dict(dataset=mn, outside=name, square=sq, verdict=verdict(obs, sq),
                                  verdict_moleculenet=verdict({k: ref_det[(k[0], k[1], mn)]
                                                               for k in obs if k[0] == sq}, sq)))
-        obs_x = X.quantities("regression", {a: S.score("regression", A) for a, A in P.items()}, X.NEW)
-        for sq in X.NEW:
-            x_verdicts.append(dict(dataset=mn, outside=name, square=sq, verdict=verdict_end(obs_x, sq)))
+        obs_x = X.quantities("regression", {a: S.score("regression", A) for a, A in P.items()})
+        for sq in X.SQUARES:
+            x_verdicts.append(dict(dataset=mn, outside=name, square=sq, group=square_group(sq),
+                                   verdict=verdict_end(obs_x, sq)))
         groups: dict[str, list[int]] = {}
         for i, smi in enumerate(rows.smiles):
             groups.setdefault(D.murcko_scaffold(smi), []).append(i)
@@ -319,11 +328,12 @@ def stage_stats() -> int:
                                   est=obs[(sq, q)], est_moleculenet=ref_det.get((sq, q, mn), np.nan),
                                   ci_lo=np.quantile(r, 0.025), ci_hi=np.quantile(r, 0.975),
                                   p_boot=min(1.0, 2 * (kk + 1) / (S.N_BOOT + 1))))
-        for (sq, q), r in X.quantities("regression", draws, X.NEW).items():
+        for (sq, q), r in X.quantities("regression", draws).items():
             if q not in X_KEEP:
                 continue
             kk = min((r <= 0).sum(), (r >= 0).sum())
-            x_rows.append(dict(square=sq, quantity=q, dataset=mn, outside=name, n=len(y), est=obs_x[(sq, q)],
+            x_rows.append(dict(square=sq, group=square_group(sq), quantity=q, dataset=mn, outside=name,
+                               n=len(y), est=obs_x[(sq, q)],
                                ci_lo=np.quantile(r, 0.025), ci_hi=np.quantile(r, 0.975),
                                p_boot=min(1.0, 2 * (kk + 1) / (S.N_BOOT + 1))))
     pt = pd.DataFrame(part_rows)
@@ -336,7 +346,7 @@ def stage_stats() -> int:
     xp = pd.DataFrame(x_rows)
     xp["p_holm"] = xp.groupby(["square", "quantity"]).p_boot.transform(S.holm)
     xp["resolved"] = (xp.p_holm < 0.05) & ((xp.ci_lo > 0) | (xp.ci_hi < 0))
-    if len(xp) != 2 * len(X.NEW) * len(X_KEEP) or len(x_verdicts) != 2 * len(X.NEW):
+    if len(xp) != 2 * len(X.SQUARES) * len(X_KEEP) or len(x_verdicts) != 2 * len(X.SQUARES):
         raise SystemExit(f"other squares: {len(xp)} part rows, {len(x_verdicts)} verdicts")
     xp.to_csv(S.OUT / "external_extra_parts.csv", index=False)
     pd.DataFrame(x_verdicts).to_csv(S.OUT / "external_extra_verdicts.csv", index=False)
@@ -349,8 +359,8 @@ def stage_stats() -> int:
     print(vd.to_string(index=False))
     print(imm[["dataset", "square", "est", "est_moleculenet", "ci_lo", "ci_hi", "p_holm", "resolved"]]
           .round(4).to_string(index=False))
-    print(f"\n'input' verdicts: outside {n_in}/10, MoleculeNet {n_mn}/10; "
-          f"input - model resolved: {n_sig}/10")
+    print(f"\n'input' verdicts: outside {n_in}/{len(vd)}, MoleculeNet {n_mn}/{len(vd)}; "
+          f"input - model resolved: {n_sig}/{len(imm)}")
     return 0
 
 

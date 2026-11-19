@@ -31,6 +31,15 @@ GRIDS = {
     "C": (["RF", "CatBoost"], ["rdkit2d", "ecfp4_2048", "maccs"]),
     # without ECFP4 and TabFM; its rows come after Grids A-C in the CSV
     "D": (["RF", "CatBoost", "TabPFN"], ["rdkit2d", "maccs"]),
+    # morgan512 as an extra input level, and rdkit2d_214 in place of rdkit2d; rows after Grid D
+    "Am": (["RF", "CatBoost", "TabPFN"], ["rdkit2d", "ecfp4_2048", "maccs", "morgan512"]),
+    "Bm": (["RF", "CatBoost", "TabPFN", "TabFM"], ["rdkit2d", "maccs", "morgan512"]),
+    "Cm": (["RF", "CatBoost"], ["rdkit2d", "ecfp4_2048", "maccs", "morgan512"]),
+    "Dm": (["RF", "CatBoost", "TabPFN"], ["rdkit2d", "maccs", "morgan512"]),
+    "A214": (["RF", "CatBoost", "TabPFN"], ["rdkit2d_214", "ecfp4_2048", "maccs"]),
+    "B214": (["RF", "CatBoost", "TabPFN", "TabFM"], ["rdkit2d_214", "maccs"]),
+    "C214": (["RF", "CatBoost"], ["rdkit2d_214", "ecfp4_2048", "maccs"]),
+    "D214": (["RF", "CatBoost", "TabPFN"], ["rdkit2d_214", "maccs"]),
 }
 TERMS = ["input", "model", "interaction", "split", "residual"]
 DIRECTION = [  # (marginal, kind, reference level, other level, squares)
@@ -97,10 +106,10 @@ def main() -> int:
     d = load()
     rng = np.random.default_rng(BOOT_SEED_VAR)
     draws = rng.integers(0, len(SPLITS), size=(N_BOOT, len(SPLITS)))  # same draws for every cell
-    rows, rows_d, verdicts, verdicts_d = [], [], {}, {}
+    rows, rows_d, rows_new, verdicts, verdicts_d = [], [], [], {}, {}
     for name in DATASETS:
         for grid, (models, inputs) in GRIDS.items():
-            dest = rows_d if grid == "D" else rows
+            dest = rows_d if grid == "D" else rows_new if grid not in ("A", "B", "C") else rows
             M, I, S = len(models), len(inputs), len(SPLITS)
             Y = cube(d, name, models, inputs)
             ss = decompose(Y)
@@ -130,7 +139,7 @@ def main() -> int:
                 inter_top = within(ss, "interaction") > max(within(ss, "input"), within(ss, "model"))
                 verdicts[name] = (v, diff, dlo, dhi, inter_top)
 
-    out = pd.DataFrame(rows + rows_d)[["dataset", "grid", "term", "df", "ss", "ms", "share_within", "share_total",
+    out = pd.DataFrame(rows + rows_d + rows_new)[["dataset", "grid", "term", "df", "ss", "ms", "share_within", "share_total",
                               "omega2", "lo", "hi"]]
     out.to_csv(STATS / "variance_decomp.csv", index=False)
 

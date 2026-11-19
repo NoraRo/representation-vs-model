@@ -28,6 +28,7 @@ import pandas as pd
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
+import extra_squares as X  # noqa: E402
 import stats as S  # noqa: E402  (read-only use of its helpers)
 import paths as PT  # noqa: E402
 from train_tabular import KIND  # noqa: E402
@@ -37,6 +38,17 @@ OUT = S.OUT
 BOOT_SEED_SIM = 2
 REGRESSION = [d for d in S.DATASETS if KIND[d] == "regression"]
 SINGLE = ["input_ref", "input_cmp", "model_start", "model_rdkit"]
+# stats.SQUARES end at rdkit2d; these end at rdkit2d_214 and come from extra_squares, which calls
+# the fourth quantity model_end where stats calls it model_rdkit
+R214 = X.R214
+SQUARES = list(S.SQUARES) + list(R214)
+
+
+def all_quantities(kind: str, sc: dict) -> dict:
+    q = S.square_quantities(kind, sc)
+    for (sq, k), v in X.quantities(kind, sc, squares=R214).items():
+        q[(sq, "model_rdkit" if k == "model_end" else k)] = v
+    return q
 
 
 def load_grid() -> pd.DataFrame:
@@ -79,22 +91,11 @@ def verdict(q: dict, sq: str) -> str:
     return "depends"
 
 
-DS_KEY = {"esol": "Esol", "freesolv": "Freesolv", "lipophilicity": "Lipo"}
-DS_NAME = {"esol": "ESOL", "freesolv": "FreeSolv", "lipophilicity": "Lipophilicity"}
-SQ_KEY = {"tabfm_maccs": "FmMaccs", "tabpfn_maccs": "PfnMaccs", "catboost_maccs": "CatMaccs",
-          "tabpfn_ecfp4": "PfnEcfp", "catboost_ecfp4": "CatEcfp"}
-Q_KEY = {"input_ref": "InputRef", "input_cmp": "InputCmp", "model_start": "ModelStart",
-         "model_rdkit": "ModelRdkit", "input_minus_model": "InputMinusModel"}
-
-
-def f3(x: float) -> str:
-    return f"\\ensuremath{{{x:.3f}}}"
-
-
 def main() -> int:
     df = load_grid()
     rng = np.random.default_rng(BOOT_SEED_SIM)
     ref_det = pd.read_csv(OUT / "parts_det.csv").set_index(["square", "quantity", "dataset"]).est
+    ref_x = pd.read_csv(OUT / "extra_squares_det.csv").set_index(["square", "quantity", "dataset"]).est
     groups, parts, verdicts = [], [], []
     for name in S.DATASETS:
         kind = KIND[name]
@@ -111,16 +112,18 @@ def main() -> int:
             if not np.array_equal(te, np.sort(splits[sp]["test"])):
                 raise RuntimeError(f"{name}/{sp}: test rows differ from the split file")
             ref = np.array(splits[sp]["train"] + splits[sp]["valid"])
-            full = S.square_quantities(kind, {a: S.score(kind, A) for a, A in P.items()})
-            for sq in S.SQUARES:
+            full = all_quantities(kind, {a: S.score(kind, A) for a, A in P.items()})
+            for sq in SQUARES:
                 verdicts.append(dict(dataset=name, kind=kind, split=sp, measure="none", group="all",
                                      square=sq, n=len(te), verdict=verdict(full, sq)))
             if sp == "det":
                 for (sq, q), v in full.items():
-                    if abs(v - ref_det[(sq, q, name)]) > 1e-12:
-                        raise RuntimeError(f"{name}: full test set does not reproduce parts_det {sq}/{q}")
-            for measure, X in fps.items():
-                sim = max_tanimoto(X, te, ref)
+                    r = (ref_x[(sq, "model_end" if q == "model_rdkit" else q, name)]
+                         if sq in R214 else ref_det[(sq, q, name)])
+                    if abs(v - r) > 1e-12:
+                        raise RuntimeError(f"{name}: full test set does not reproduce {sq}/{q}")
+            for measure, fp in fps.items():
+                sim = max_tanimoto(fp, te, ref)
                 far = halves(sim, te)
                 if abs(far.sum() - (~far).sum()) > 1:
                     raise RuntimeError(f"{name}/{sp}/{measure}: unequal halves")
@@ -129,13 +132,13 @@ def main() -> int:
                                for r, s, f in zip(te, sim, far)]
                 for g, mask in (("near", ~far), ("far", far)):
                     idx = np.flatnonzero(mask)
-                    q = S.square_quantities(kind, {a: S.score(kind, A, idx) for a, A in P.items()})
-                    for sq in S.SQUARES:
+                    q = all_quantities(kind, {a: S.score(kind, A, idx) for a, A in P.items()})
+                    for sq in SQUARES:
                         verdicts.append(dict(dataset=name, kind=kind, split=sp, measure=measure, group=g,
                                              square=sq, n=len(idx), verdict=verdict(q, sq)))
                     if sp == "det" and measure == "ecfp4":
                         for (sq, qq), v in q.items():
-                            if sq in S.SQUARES:
+                            if sq in SQUARES:
                                 parts.append(dict(dataset=name, kind=kind, group=g, square=sq, quantity=qq,
                                                   n=len(idx), est=v))
             # fixed split, regression: joint bootstrap, scored within each half
@@ -150,7 +153,7 @@ def main() -> int:
                 for g, sel in (("near", idx[~far[idx]]), ("far", idx[far[idx]])):
                     for a, A in P.items():
                         draws[g][a][i] = S.score(kind, A, sel)
-            reps = {g: S.square_quantities(kind, draws[g]) for g in draws}
+            reps = {g: all_quantities(kind, draws[g]) for g in draws}
             for row in parts:
                 if row["dataset"] != name or "ci_lo" in row:
                     continue
@@ -159,7 +162,7 @@ def main() -> int:
                 kk = min((r <= 0).sum(), (r >= 0).sum())
                 row.update(ci_lo=np.quantile(r, 0.025), ci_hi=np.quantile(r, 0.975),
                            p_boot=min(1.0, 2 * (kk + 1) / (S.N_BOOT + 1)))
-            for sq in S.SQUARES:  # far - near of (input part - model part)
+            for sq in SQUARES:  # far - near of (input part - model part)
                 key = (sq, "input_minus_model")
                 obs = (next(p["est"] for p in parts if p["dataset"] == name and p["group"] == "far"
                             and p["square"] == sq and p["quantity"] == "input_minus_model")
@@ -185,9 +188,10 @@ def main() -> int:
 
 
     r = vd[(vd.kind == "regression")]
-    print("\nFixed split, regression: 'input' verdicts out of 15")
+    n_cells = len(REGRESSION) * len(SQUARES)
+    print(f"\nFixed split, regression: 'input' verdicts out of {n_cells}")
     print(r[r.split == "det"].groupby(["measure", "group"]).verdict.apply(lambda v: (v == "input").sum()).to_string())
-    print("\nSeeded splits: mean 'input' verdicts out of 15 per split")
+    print(f"\nSeeded splits: mean 'input' verdicts out of {n_cells} per split")
     s = r[r.split != "det"].groupby(["measure", "group", "split"]).verdict.apply(lambda v: (v == "input").sum())
     print(s.groupby(["measure", "group"]).agg(["mean", "min", "max"]).to_string())
     return 0

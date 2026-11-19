@@ -1,13 +1,15 @@
-"""The 7 other squares: does the split into representation and model effect depend on the RF
-as reference model and on RDKit descriptors as final representation? No training: every model
-is in stats.GRID_ARMS. The published-split bootstrap uses the same random-number stream and
-order as stats.parts(), so the 5 main squares come out exactly as in parts_det.csv (guard 1).
+"""The other squares: does the split into representation and model effect depend on the RF
+as reference model and on RDKit descriptors as final representation? Every factorial design the
+direction rule below allows is computed, the 5 main squares included. No training: every model is
+in stats.GRID_ARMS. The published-split bootstrap uses the same random-number stream and order as
+stats.parts(), so the 5 main squares come out exactly as in parts_det.csv (guard 1).
 
 Writes results/stats/extra_squares_det.csv and extra_squares_seeded.csv.
 """
 
 from __future__ import annotations
 
+import itertools
 import pathlib
 import sys
 
@@ -22,7 +24,7 @@ OUT = S.OUT
 TOL = 1e-12
 
 # square: (reference model, compared model, start input, end input). Direction rule:
-# reference = earlier in RF -> CatBoost -> TabPFN -> TabFM; start = earlier in ECFP4 -> MACCS -> rdkit2d.
+# reference = earlier in MODEL_ORDER; start = earlier in INPUT_ORDER.
 MAIN = {
     "tabfm_maccs": ("RF", "TabFM", "maccs", "rdkit2d"),
     "tabpfn_maccs": ("RF", "TabPFN", "maccs", "rdkit2d"),
@@ -39,13 +41,31 @@ NEW = {
     "cat_tabfm_m2r": ("CatBoost", "TabFM", "maccs", "rdkit2d"),
     "pfn_tabfm_m2r": ("TabPFN", "TabFM", "maccs", "rdkit2d"),
 }
-SQUARES = {**MAIN, **NEW}
-NEW_TO_RDKIT = [s for s, v in NEW.items() if v[3] == "rdkit2d"]
-NEW_E2M = [s for s, v in NEW.items() if v[3] == "maccs"]
+# the 5 main designs again with rdkit2d_214 as the end input
+R214 = {f"{sq}_214": (m0, m1, i0, "rdkit2d_214") for sq, (m0, m1, i0, _) in MAIN.items()}
+
+MODEL_ORDER = ("RF", "CatBoost", "TabPFN", "TabFM")
+INPUT_ORDER = ("ecfp4_2048", "maccs", "morgan512", "rdkit2d", "rdkit2d_214")
+_MODEL_KEY = {"RF": "rf", "CatBoost": "cat", "TabPFN": "pfn", "TabFM": "fm"}
+_INPUT_KEY = {"ecfp4_2048": "e", "maccs": "m", "morgan512": "g", "rdkit2d": "r", "rdkit2d_214": "r214"}
+
+
+def complete_squares() -> dict:
+    """Every design the direction rule allows; one is left out only when an arm was never run
+    (TabFM has no ECFP4 arm)."""
+    arms = set(S.GRID_ARMS)
+    out = {}
+    for m0, m1 in itertools.combinations(MODEL_ORDER, 2):
+        for i0, i1 in itertools.combinations(INPUT_ORDER, 2):
+            if all(f"{m}|{i}" in arms for m in (m0, m1) for i in (i0, i1)):
+                out[f"{_MODEL_KEY[m0]}_{_MODEL_KEY[m1]}_{_INPUT_KEY[i0]}2{_INPUT_KEY[i1]}"] = (m0, m1, i0, i1)
+    return out
+
+
+_NAMED = {**MAIN, **NEW, **R214}
+SQUARES = {**_NAMED, **{k: v for k, v in complete_squares().items() if v not in set(_NAMED.values())}}
 QUANTS = ["input_ref", "input_cmp", "model_start", "model_end", "input_avg", "model_avg", "total",
-          "input_minus_model", "interaction", "abs_input_minus_abs_model"]
-REG = ["esol", "freesolv", "lipophilicity"]
-CLS = ["bbbp", "bace", "clintox", "sider"]
+          "input_minus_model", "interaction"]
 
 
 class GuardError(RuntimeError):
@@ -67,7 +87,6 @@ def quantities(kind: str, sc: dict, squares=SQUARES) -> dict:
              "total": S.gain(kind, a, d)}
         q["input_minus_model"] = q["input_avg"] - q["model_avg"]
         q["interaction"] = mo_i1 - mo_i0
-        q["abs_input_minus_abs_model"] = np.abs(q["input_avg"]) - np.abs(q["model_avg"])
         for k, v in q.items():
             out[(sq, k)] = v
     return out
@@ -197,8 +216,23 @@ def guard2(reps, name, squares=SQUARES):
                              f"(sum {e1:.3g}, interaction {e2:.3g} / {e3:.3g})")
 
 
+def guard4() -> int:
+    """The designs built are exactly the ones the direction rule allows, and the rule covers
+    exactly the models and inputs of the arms."""
+    if {a.split("|")[0] for a in S.GRID_ARMS} != set(MODEL_ORDER):
+        raise GuardError("guard 4: MODEL_ORDER differs from the models of the arms")
+    if {a.split("|")[1] for a in S.GRID_ARMS} != set(INPUT_ORDER):
+        raise GuardError("guard 4: INPUT_ORDER differs from the inputs of the arms")
+    want = complete_squares()
+    built, possible = set(SQUARES.values()), set(want.values())
+    if built != possible or len(SQUARES) != len(want):
+        raise GuardError(f"guard 4: {len(SQUARES)} designs built, {len(want)} possible; "
+                         f"missing {sorted(possible - built)}, unexpected {sorted(built - possible)}")
+    return len(want)
+
+
 def guard3(det, seeded):
-    """All 12 squares x all quantities x 7 datasets present; no NaN."""
+    """All squares x all quantities x 7 datasets present; no NaN."""
     want = len(SQUARES) * len(QUANTS) * len(S.DATASETS)
     bad = []
     for name, t, cols in (("det", det, ["est", "ci_lo", "ci_hi", "p_boot", "p_holm"]),
@@ -221,6 +255,7 @@ def main() -> int:
     det, seeded = tables(res)          # guard 2 runs inside, per draw
     guard1(det, seeded)
     guard3(det, seeded)
+    guard4()
     det.to_csv(OUT / "extra_squares_det.csv", index=False)
     seeded.to_csv(OUT / "extra_squares_seeded.csv", index=False)
     print(f"wrote {OUT / 'extra_squares_det.csv'} and extra_squares_seeded.csv")

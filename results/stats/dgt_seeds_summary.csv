@@ -1,0 +1,8 @@
+dataset,seeds,tabfm_better,dgt_better,configs,mean_gain
+esol,4,4,0,github,0.23900114049748777
+freesolv,4,4,0,github,1.1404078097103705
+lipophilicity,4,0,0,github,0.020956809938742937
+bbbp,4,2,0,github,0.05969987474708549
+bace,4,0,0,github,0.022984601449275388
+clintox,4,4,0,github+zenodo,0.29480111562923583
+sider,4,4,0,github+zenodo,0.08505797283424416

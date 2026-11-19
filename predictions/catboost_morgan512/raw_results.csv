@@ -1,0 +1,375 @@
+dataset,kind,task,model,features,split,metric,value,pred_file
+esol,regression,logS,CatBoost,morgan512,det,RMSE,1.4704746930626615,esol__logS__det.npy
+esol,regression,logS,CatBoost,morgan512,0,RMSE,1.4436206590232885,esol__logS__0.npy
+esol,regression,logS,CatBoost,morgan512,1,RMSE,1.3201974425989116,esol__logS__1.npy
+esol,regression,logS,CatBoost,morgan512,2,RMSE,1.6490470834968003,esol__logS__2.npy
+esol,regression,logS,CatBoost,morgan512,3,RMSE,1.4485465354371323,esol__logS__3.npy
+esol,regression,logS,CatBoost,morgan512,4,RMSE,1.5722945150758312,esol__logS__4.npy
+esol,regression,logS,CatBoost,morgan512,5,RMSE,1.3638003032005874,esol__logS__5.npy
+esol,regression,logS,CatBoost,morgan512,6,RMSE,1.6149110379532454,esol__logS__6.npy
+esol,regression,logS,CatBoost,morgan512,7,RMSE,1.3469472661160358,esol__logS__7.npy
+esol,regression,logS,CatBoost,morgan512,8,RMSE,1.468545043718285,esol__logS__8.npy
+esol,regression,logS,CatBoost,morgan512,9,RMSE,1.4020557787893684,esol__logS__9.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,det,RMSE,2.9628502035697664,freesolv__dGhyd__det.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,0,RMSE,3.647742503258798,freesolv__dGhyd__0.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,1,RMSE,1.9880700540473584,freesolv__dGhyd__1.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,2,RMSE,2.007357162473761,freesolv__dGhyd__2.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,3,RMSE,2.160534898951165,freesolv__dGhyd__3.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,4,RMSE,4.210524621786229,freesolv__dGhyd__4.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,5,RMSE,3.619987318121511,freesolv__dGhyd__5.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,6,RMSE,3.6629663375022656,freesolv__dGhyd__6.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,7,RMSE,3.308324844473899,freesolv__dGhyd__7.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,8,RMSE,4.268928858697463,freesolv__dGhyd__8.npy
+freesolv,regression,dGhyd,CatBoost,morgan512,9,RMSE,3.2947893208484147,freesolv__dGhyd__9.npy
+lipophilicity,regression,logD,CatBoost,morgan512,det,RMSE,0.8672850448572584,lipophilicity__logD__det.npy
+lipophilicity,regression,logD,CatBoost,morgan512,0,RMSE,0.8701340899001545,lipophilicity__logD__0.npy
+lipophilicity,regression,logD,CatBoost,morgan512,1,RMSE,0.8782594981789548,lipophilicity__logD__1.npy
+lipophilicity,regression,logD,CatBoost,morgan512,2,RMSE,0.9590001980065452,lipophilicity__logD__2.npy
+lipophilicity,regression,logD,CatBoost,morgan512,3,RMSE,0.8636066328753013,lipophilicity__logD__3.npy
+lipophilicity,regression,logD,CatBoost,morgan512,4,RMSE,0.8544442253112557,lipophilicity__logD__4.npy
+lipophilicity,regression,logD,CatBoost,morgan512,5,RMSE,0.8530120794848906,lipophilicity__logD__5.npy
+lipophilicity,regression,logD,CatBoost,morgan512,6,RMSE,0.7713186387739486,lipophilicity__logD__6.npy
+lipophilicity,regression,logD,CatBoost,morgan512,7,RMSE,0.9784495852283543,lipophilicity__logD__7.npy
+lipophilicity,regression,logD,CatBoost,morgan512,8,RMSE,0.8842134901102695,lipophilicity__logD__8.npy
+lipophilicity,regression,logD,CatBoost,morgan512,9,RMSE,0.9565006344141014,lipophilicity__logD__9.npy
+bbbp,classification,p_np,CatBoost,morgan512,det,AUC-ROC,0.7504576548800461,bbbp__p_np__det.npy
+bbbp,classification,p_np,CatBoost,morgan512,0,AUC-ROC,0.9477833096254148,bbbp__p_np__0.npy
+bbbp,classification,p_np,CatBoost,morgan512,1,AUC-ROC,0.9268388106416277,bbbp__p_np__1.npy
+bbbp,classification,p_np,CatBoost,morgan512,2,AUC-ROC,0.8786695394559656,bbbp__p_np__2.npy
+bbbp,classification,p_np,CatBoost,morgan512,3,AUC-ROC,0.9411945057640422,bbbp__p_np__3.npy
+bbbp,classification,p_np,CatBoost,morgan512,4,AUC-ROC,0.8454636807349986,bbbp__p_np__4.npy
+bbbp,classification,p_np,CatBoost,morgan512,5,AUC-ROC,0.9018421626335296,bbbp__p_np__5.npy
+bbbp,classification,p_np,CatBoost,morgan512,6,AUC-ROC,0.949810904506776,bbbp__p_np__6.npy
+bbbp,classification,p_np,CatBoost,morgan512,7,AUC-ROC,0.8457955088389871,bbbp__p_np__7.npy
+bbbp,classification,p_np,CatBoost,morgan512,8,AUC-ROC,0.7885714285714286,bbbp__p_np__8.npy
+bbbp,classification,p_np,CatBoost,morgan512,9,AUC-ROC,0.9576002814919072,bbbp__p_np__9.npy
+bace,classification,Class,CatBoost,morgan512,det,AUC-ROC,0.8498188405797101,bace__Class__det.npy
+bace,classification,Class,CatBoost,morgan512,0,AUC-ROC,0.8986474770244494,bace__Class__0.npy
+bace,classification,Class,CatBoost,morgan512,1,AUC-ROC,0.8764705882352941,bace__Class__1.npy
+bace,classification,Class,CatBoost,morgan512,2,AUC-ROC,0.8571428571428571,bace__Class__2.npy
+bace,classification,Class,CatBoost,morgan512,3,AUC-ROC,0.8914634146341464,bace__Class__3.npy
+bace,classification,Class,CatBoost,morgan512,4,AUC-ROC,0.9100601421541826,bace__Class__4.npy
+bace,classification,Class,CatBoost,morgan512,5,AUC-ROC,0.8320119802677943,bace__Class__5.npy
+bace,classification,Class,CatBoost,morgan512,6,AUC-ROC,0.846684350132626,bace__Class__6.npy
+bace,classification,Class,CatBoost,morgan512,7,AUC-ROC,0.8713883016208597,bace__Class__7.npy
+bace,classification,Class,CatBoost,morgan512,8,AUC-ROC,0.8073521761747876,bace__Class__8.npy
+bace,classification,Class,CatBoost,morgan512,9,AUC-ROC,0.8773529411764706,bace__Class__9.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,det,AUC-ROC,0.78017585931255,clintox__FDA_APPROVED__det.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,det,AUC-ROC,0.7572463768115942,clintox__CT_TOX__det.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,0,AUC-ROC,0.867953431372549,clintox__FDA_APPROVED__0.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,0,AUC-ROC,0.8571428571428571,clintox__CT_TOX__0.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,1,AUC-ROC,0.7859848484848485,clintox__FDA_APPROVED__1.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,1,AUC-ROC,0.8051189941625505,clintox__CT_TOX__1.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,2,AUC-ROC,0.8260869565217391,clintox__FDA_APPROVED__2.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,2,AUC-ROC,0.8615942028985507,clintox__CT_TOX__2.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,3,AUC-ROC,0.8840579710144927,clintox__FDA_APPROVED__3.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,3,AUC-ROC,0.7708333333333334,clintox__CT_TOX__3.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,4,AUC-ROC,0.8660714285714286,clintox__FDA_APPROVED__4.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,4,AUC-ROC,0.887193098871931,clintox__CT_TOX__4.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,5,AUC-ROC,0.8153409090909091,clintox__FDA_APPROVED__5.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,5,AUC-ROC,0.7930871212121212,clintox__CT_TOX__5.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,6,AUC-ROC,0.771875,clintox__FDA_APPROVED__6.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,6,AUC-ROC,0.7111607142857144,clintox__CT_TOX__6.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,7,AUC-ROC,0.9061048440610484,clintox__FDA_APPROVED__7.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,7,AUC-ROC,0.8964912280701754,clintox__CT_TOX__7.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,8,AUC-ROC,0.7904411764705882,clintox__FDA_APPROVED__8.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,8,AUC-ROC,0.8842105263157896,clintox__CT_TOX__8.npy
+clintox,classification,FDA_APPROVED,CatBoost,morgan512,9,AUC-ROC,0.7694128787878788,clintox__FDA_APPROVED__9.npy
+clintox,classification,CT_TOX,CatBoost,morgan512,9,AUC-ROC,0.710042735042735,clintox__CT_TOX__9.npy
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,det,AUC-ROC,0.6337641989815904,sider__Hepatobiliary disorders__det.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,det,AUC-ROC,0.626077097505669,sider__Metabolism and nutrition disorders__det.npy
+sider,classification,Product issues,CatBoost,morgan512,det,AUC-ROC,0.6960431654676259,sider__Product issues__det.npy
+sider,classification,Eye disorders,CatBoost,morgan512,det,AUC-ROC,0.7481083233771406,sider__Eye disorders__det.npy
+sider,classification,Investigations,CatBoost,morgan512,det,AUC-ROC,0.7013333333333334,sider__Investigations__det.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,det,AUC-ROC,0.6391184573002755,sider__Musculoskeletal and connective tissue disorders__det.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,det,AUC-ROC,0.7637741046831956,sider__Gastrointestinal disorders__det.npy
+sider,classification,Social circumstances,CatBoost,morgan512,det,AUC-ROC,0.6209677419354839,sider__Social circumstances__det.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,det,AUC-ROC,0.5308270676691729,sider__Immune system disorders__det.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,det,AUC-ROC,0.7548323471400394,sider__Reproductive system and breast disorders__det.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,det,AUC-ROC,0.6057692307692308,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__det.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,det,AUC-ROC,0.6437007874015749,sider__General disorders and administration site conditions__det.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,det,AUC-ROC,0.618732782369146,sider__Endocrine disorders__det.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,det,AUC-ROC,0.5491124260355029,sider__Surgical and medical procedures__det.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,det,AUC-ROC,0.6561059907834101,sider__Vascular disorders__det.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,det,AUC-ROC,0.7140562248995984,sider__Blood and lymphatic system disorders__det.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,det,AUC-ROC,0.7396593673965937,sider__Skin and subcutaneous tissue disorders__det.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,det,AUC-ROC,0.6414565826330532,"sider__Congenital, familial and genetic disorders__det.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,det,AUC-ROC,0.7534181989627534,sider__Infections and infestations__det.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,det,AUC-ROC,0.5658391797085808,"sider__Respiratory, thoracic and mediastinal disorders__det.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,det,AUC-ROC,0.5946915351506457,sider__Psychiatric disorders__det.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,det,AUC-ROC,0.7023809523809524,sider__Renal and urinary disorders__det.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,det,AUC-ROC,0.588235294117647,"sider__Pregnancy, puerperium and perinatal conditions__det.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,det,AUC-ROC,0.5518102372034956,sider__Ear and labyrinth disorders__det.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,det,AUC-ROC,0.6802112029384757,sider__Cardiac disorders__det.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,det,AUC-ROC,0.6500829187396352,sider__Nervous system disorders__det.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,det,AUC-ROC,0.6487864077669903,"sider__Injury, poisoning and procedural complications__det.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,0,AUC-ROC,0.7629990262901656,sider__Hepatobiliary disorders__0.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,0,AUC-ROC,0.5621075621075621,sider__Metabolism and nutrition disorders__0.npy
+sider,classification,Product issues,CatBoost,morgan512,0,AUC-ROC,0.6535714285714286,sider__Product issues__0.npy
+sider,classification,Eye disorders,CatBoost,morgan512,0,AUC-ROC,0.6432637571157495,sider__Eye disorders__0.npy
+sider,classification,Investigations,CatBoost,morgan512,0,AUC-ROC,0.5528455284552847,sider__Investigations__0.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,0,AUC-ROC,0.6020454545454546,sider__Musculoskeletal and connective tissue disorders__0.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,0,AUC-ROC,0.8152173913043479,sider__Gastrointestinal disorders__0.npy
+sider,classification,Social circumstances,CatBoost,morgan512,0,AUC-ROC,0.5725146198830409,sider__Social circumstances__0.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,0,AUC-ROC,0.7353801169590644,sider__Immune system disorders__0.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,0,AUC-ROC,0.6133900928792569,sider__Reproductive system and breast disorders__0.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,0,AUC-ROC,0.6014423076923077,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__0.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,0,AUC-ROC,0.7086419753086419,sider__General disorders and administration site conditions__0.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,0,AUC-ROC,0.7026748971193416,sider__Endocrine disorders__0.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,0,AUC-ROC,0.6222222222222222,sider__Surgical and medical procedures__0.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,0,AUC-ROC,0.563115763546798,sider__Vascular disorders__0.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,0,AUC-ROC,0.646900269541779,sider__Blood and lymphatic system disorders__0.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,0,AUC-ROC,0.6148897058823529,sider__Skin and subcutaneous tissue disorders__0.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,0,AUC-ROC,0.5870967741935484,"sider__Congenital, familial and genetic disorders__0.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,0,AUC-ROC,0.6511140235910878,sider__Infections and infestations__0.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,0,AUC-ROC,0.6149925037481259,"sider__Respiratory, thoracic and mediastinal disorders__0.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,0,AUC-ROC,0.6069958847736626,sider__Psychiatric disorders__0.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,0,AUC-ROC,0.6401909722222222,sider__Renal and urinary disorders__0.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,0,AUC-ROC,0.4872427983539095,"sider__Pregnancy, puerperium and perinatal conditions__0.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,0,AUC-ROC,0.6255072463768117,sider__Ear and labyrinth disorders__0.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,0,AUC-ROC,0.7034465020576133,sider__Cardiac disorders__0.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,0,AUC-ROC,0.6982142857142857,sider__Nervous system disorders__0.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,0,AUC-ROC,0.575,"sider__Injury, poisoning and procedural complications__0.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,1,AUC-ROC,0.6932539682539682,sider__Hepatobiliary disorders__1.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,1,AUC-ROC,0.5897633744855967,sider__Metabolism and nutrition disorders__1.npy
+sider,classification,Product issues,CatBoost,morgan512,1,AUC-ROC,0.4278959810874704,sider__Product issues__1.npy
+sider,classification,Eye disorders,CatBoost,morgan512,1,AUC-ROC,0.6017957351290685,sider__Eye disorders__1.npy
+sider,classification,Investigations,CatBoost,morgan512,1,AUC-ROC,0.528842105263158,sider__Investigations__1.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,1,AUC-ROC,0.6040536682843276,sider__Musculoskeletal and connective tissue disorders__1.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,1,AUC-ROC,0.5284926470588236,sider__Gastrointestinal disorders__1.npy
+sider,classification,Social circumstances,CatBoost,morgan512,1,AUC-ROC,0.5698891625615763,sider__Social circumstances__1.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,1,AUC-ROC,0.6263202968883813,sider__Immune system disorders__1.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,1,AUC-ROC,0.6963097398669087,sider__Reproductive system and breast disorders__1.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,1,AUC-ROC,0.6591346153846153,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__1.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,1,AUC-ROC,0.4640151515151515,sider__General disorders and administration site conditions__1.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,1,AUC-ROC,0.6437757201646092,sider__Endocrine disorders__1.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,1,AUC-ROC,0.4581512605042017,sider__Surgical and medical procedures__1.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,1,AUC-ROC,0.6121527777777778,sider__Vascular disorders__1.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,1,AUC-ROC,0.717013888888889,sider__Blood and lymphatic system disorders__1.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,1,AUC-ROC,0.6506777893639207,sider__Skin and subcutaneous tissue disorders__1.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,1,AUC-ROC,0.5549707602339181,"sider__Congenital, familial and genetic disorders__1.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,1,AUC-ROC,0.6419234360410832,sider__Infections and infestations__1.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,1,AUC-ROC,0.534375,"sider__Respiratory, thoracic and mediastinal disorders__1.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,1,AUC-ROC,0.6210826210826211,sider__Psychiatric disorders__1.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,1,AUC-ROC,0.5550411522633745,sider__Renal and urinary disorders__1.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,1,AUC-ROC,0.5802197802197802,"sider__Pregnancy, puerperium and perinatal conditions__1.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,1,AUC-ROC,0.642760224849777,sider__Ear and labyrinth disorders__1.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,1,AUC-ROC,0.7089308996088657,sider__Cardiac disorders__1.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,1,AUC-ROC,0.5070422535211268,sider__Nervous system disorders__1.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,1,AUC-ROC,0.5704326923076923,"sider__Injury, poisoning and procedural complications__1.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,2,AUC-ROC,0.7215557275541796,sider__Hepatobiliary disorders__2.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,2,AUC-ROC,0.6631360810499655,sider__Metabolism and nutrition disorders__2.npy
+sider,classification,Product issues,CatBoost,morgan512,2,AUC-ROC,0.5650118203309693,sider__Product issues__2.npy
+sider,classification,Eye disorders,CatBoost,morgan512,2,AUC-ROC,0.6547325102880658,sider__Eye disorders__2.npy
+sider,classification,Investigations,CatBoost,morgan512,2,AUC-ROC,0.5523391812865498,sider__Investigations__2.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,2,AUC-ROC,0.5721611721611721,sider__Musculoskeletal and connective tissue disorders__2.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,2,AUC-ROC,0.7579365079365079,sider__Gastrointestinal disorders__2.npy
+sider,classification,Social circumstances,CatBoost,morgan512,2,AUC-ROC,0.6369104146881925,sider__Social circumstances__2.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,2,AUC-ROC,0.6221505871517384,sider__Immune system disorders__2.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,2,AUC-ROC,0.6546859903381643,sider__Reproductive system and breast disorders__2.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,2,AUC-ROC,0.6365546218487396,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__2.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,2,AUC-ROC,0.5532967032967033,sider__General disorders and administration site conditions__2.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,2,AUC-ROC,0.7202398800599701,sider__Endocrine disorders__2.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,2,AUC-ROC,0.4791044776119403,sider__Surgical and medical procedures__2.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,2,AUC-ROC,0.5652929493545185,sider__Vascular disorders__2.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,2,AUC-ROC,0.72265625,sider__Blood and lymphatic system disorders__2.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,2,AUC-ROC,0.7184343434343434,sider__Skin and subcutaneous tissue disorders__2.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,2,AUC-ROC,0.454367666232073,"sider__Congenital, familial and genetic disorders__2.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,2,AUC-ROC,0.6922727272727273,sider__Infections and infestations__2.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,2,AUC-ROC,0.5968678959333165,"sider__Respiratory, thoracic and mediastinal disorders__2.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,2,AUC-ROC,0.61531279178338,sider__Psychiatric disorders__2.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,2,AUC-ROC,0.6355085243974132,sider__Renal and urinary disorders__2.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,2,AUC-ROC,0.4985320023487962,"sider__Pregnancy, puerperium and perinatal conditions__2.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,2,AUC-ROC,0.5838340763713898,sider__Ear and labyrinth disorders__2.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,2,AUC-ROC,0.6277834525025536,sider__Cardiac disorders__2.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,2,AUC-ROC,0.7108585858585859,sider__Nervous system disorders__2.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,2,AUC-ROC,0.5942359527265189,"sider__Injury, poisoning and procedural complications__2.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,3,AUC-ROC,0.6501310748134704,sider__Hepatobiliary disorders__3.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,3,AUC-ROC,0.3927507447864945,sider__Metabolism and nutrition disorders__3.npy
+sider,classification,Product issues,CatBoost,morgan512,3,AUC-ROC,0.5845070422535211,sider__Product issues__3.npy
+sider,classification,Eye disorders,CatBoost,morgan512,3,AUC-ROC,0.6192283364958887,sider__Eye disorders__3.npy
+sider,classification,Investigations,CatBoost,morgan512,3,AUC-ROC,0.4270495599814728,sider__Investigations__3.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,3,AUC-ROC,0.4914809960681521,sider__Musculoskeletal and connective tissue disorders__3.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,3,AUC-ROC,0.629595588235294,sider__Gastrointestinal disorders__3.npy
+sider,classification,Social circumstances,CatBoost,morgan512,3,AUC-ROC,0.5615763546798029,sider__Social circumstances__3.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,3,AUC-ROC,0.5160818713450293,sider__Immune system disorders__3.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,3,AUC-ROC,0.7165196471531677,sider__Reproductive system and breast disorders__3.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,3,AUC-ROC,0.698989898989899,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__3.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,3,AUC-ROC,0.580813347236705,sider__General disorders and administration site conditions__3.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,3,AUC-ROC,0.6087962962962963,sider__Endocrine disorders__3.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,3,AUC-ROC,0.486214605067064,sider__Surgical and medical procedures__3.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,3,AUC-ROC,0.5748152709359606,sider__Vascular disorders__3.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,3,AUC-ROC,0.6593551217372231,sider__Blood and lymphatic system disorders__3.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,3,AUC-ROC,0.7153284671532847,sider__Skin and subcutaneous tissue disorders__3.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,3,AUC-ROC,0.4872881355932204,"sider__Congenital, familial and genetic disorders__3.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,3,AUC-ROC,0.6303376365441906,sider__Infections and infestations__3.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,3,AUC-ROC,0.585133744855967,"sider__Respiratory, thoracic and mediastinal disorders__3.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,3,AUC-ROC,0.5534979423868313,sider__Psychiatric disorders__3.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,3,AUC-ROC,0.6084667690282958,sider__Renal and urinary disorders__3.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,3,AUC-ROC,0.6189516129032259,"sider__Pregnancy, puerperium and perinatal conditions__3.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,3,AUC-ROC,0.574980574980575,sider__Ear and labyrinth disorders__3.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,3,AUC-ROC,0.5746352413019079,sider__Cardiac disorders__3.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,3,AUC-ROC,0.431985294117647,sider__Nervous system disorders__3.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,3,AUC-ROC,0.6106951871657754,"sider__Injury, poisoning and procedural complications__3.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,4,AUC-ROC,0.6666023166023165,sider__Hepatobiliary disorders__4.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,4,AUC-ROC,0.5555288461538461,sider__Metabolism and nutrition disorders__4.npy
+sider,classification,Product issues,CatBoost,morgan512,4,AUC-ROC,0.3636363636363636,sider__Product issues__4.npy
+sider,classification,Eye disorders,CatBoost,morgan512,4,AUC-ROC,0.6017946161515453,sider__Eye disorders__4.npy
+sider,classification,Investigations,CatBoost,morgan512,4,AUC-ROC,0.5409722222222222,sider__Investigations__4.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,4,AUC-ROC,0.5630585898709037,sider__Musculoskeletal and connective tissue disorders__4.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,4,AUC-ROC,0.638888888888889,sider__Gastrointestinal disorders__4.npy
+sider,classification,Social circumstances,CatBoost,morgan512,4,AUC-ROC,0.6110924369747899,sider__Social circumstances__4.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,4,AUC-ROC,0.5626373626373626,sider__Immune system disorders__4.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,4,AUC-ROC,0.7019305019305019,sider__Reproductive system and breast disorders__4.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,4,AUC-ROC,0.6010427010923535,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__4.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,4,AUC-ROC,0.5719318849089841,sider__General disorders and administration site conditions__4.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,4,AUC-ROC,0.622192513368984,sider__Endocrine disorders__4.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,4,AUC-ROC,0.4808362369337978,sider__Surgical and medical procedures__4.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,4,AUC-ROC,0.4614789005032907,sider__Vascular disorders__4.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,4,AUC-ROC,0.6820577693442968,sider__Blood and lymphatic system disorders__4.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,4,AUC-ROC,0.6415441176470589,sider__Skin and subcutaneous tissue disorders__4.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,4,AUC-ROC,0.4593225704336816,"sider__Congenital, familial and genetic disorders__4.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,4,AUC-ROC,0.6345454545454545,sider__Infections and infestations__4.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,4,AUC-ROC,0.6460176991150443,"sider__Respiratory, thoracic and mediastinal disorders__4.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,4,AUC-ROC,0.5751452386966406,sider__Psychiatric disorders__4.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,4,AUC-ROC,0.7136519459568461,sider__Renal and urinary disorders__4.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,4,AUC-ROC,0.5195707070707071,"sider__Pregnancy, puerperium and perinatal conditions__4.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,4,AUC-ROC,0.5615429346772631,sider__Ear and labyrinth disorders__4.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,4,AUC-ROC,0.625364758698092,sider__Cardiac disorders__4.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,4,AUC-ROC,0.6532374100719425,sider__Nervous system disorders__4.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,4,AUC-ROC,0.5340067340067339,"sider__Injury, poisoning and procedural complications__4.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,8,AUC-ROC,0.6001209921355112,sider__Hepatobiliary disorders__8.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,8,AUC-ROC,0.5354887597878252,sider__Metabolism and nutrition disorders__8.npy
+sider,classification,Product issues,CatBoost,morgan512,8,AUC-ROC,0.823943661971831,sider__Product issues__8.npy
+sider,classification,Eye disorders,CatBoost,morgan512,8,AUC-ROC,0.6294051627384962,sider__Eye disorders__8.npy
+sider,classification,Investigations,CatBoost,morgan512,8,AUC-ROC,0.6648995535714286,sider__Investigations__8.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,8,AUC-ROC,0.5949197860962567,sider__Musculoskeletal and connective tissue disorders__8.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,8,AUC-ROC,0.6589552238805969,sider__Gastrointestinal disorders__8.npy
+sider,classification,Social circumstances,CatBoost,morgan512,8,AUC-ROC,0.6083357122466457,sider__Social circumstances__8.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,8,AUC-ROC,0.5968253968253968,sider__Immune system disorders__8.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,8,AUC-ROC,0.7246517027863778,sider__Reproductive system and breast disorders__8.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,8,AUC-ROC,0.6208638545087143,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__8.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,8,AUC-ROC,0.5568181818181819,sider__General disorders and administration site conditions__8.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,8,AUC-ROC,0.5489304812834225,sider__Endocrine disorders__8.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,8,AUC-ROC,0.4627421758569299,sider__Surgical and medical procedures__8.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,8,AUC-ROC,0.6295482295482295,sider__Vascular disorders__8.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,8,AUC-ROC,0.6126217532467533,sider__Blood and lymphatic system disorders__8.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,8,AUC-ROC,0.4374572795625427,sider__Skin and subcutaneous tissue disorders__8.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,8,AUC-ROC,0.5618866729977842,"sider__Congenital, familial and genetic disorders__8.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,8,AUC-ROC,0.5818544809228039,sider__Infections and infestations__8.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,8,AUC-ROC,0.6734916734916735,"sider__Respiratory, thoracic and mediastinal disorders__8.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,8,AUC-ROC,0.6154835390946503,sider__Psychiatric disorders__8.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,8,AUC-ROC,0.7144648829431438,sider__Renal and urinary disorders__8.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,8,AUC-ROC,0.6987668819729889,"sider__Pregnancy, puerperium and perinatal conditions__8.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,8,AUC-ROC,0.4930340557275541,sider__Ear and labyrinth disorders__8.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,8,AUC-ROC,0.593984962406015,sider__Cardiac disorders__8.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,8,AUC-ROC,0.6246268656716418,sider__Nervous system disorders__8.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,8,AUC-ROC,0.64396628216504,"sider__Injury, poisoning and procedural complications__8.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,9,AUC-ROC,0.8018522091452828,sider__Hepatobiliary disorders__9.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,9,AUC-ROC,0.6834224598930481,sider__Metabolism and nutrition disorders__9.npy
+sider,classification,Product issues,CatBoost,morgan512,9,AUC-ROC,0.7092198581560284,sider__Product issues__9.npy
+sider,classification,Eye disorders,CatBoost,morgan512,9,AUC-ROC,0.7152196118488253,sider__Eye disorders__9.npy
+sider,classification,Investigations,CatBoost,morgan512,9,AUC-ROC,0.7097615499254843,sider__Investigations__9.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,9,AUC-ROC,0.6122100122100121,sider__Musculoskeletal and connective tissue disorders__9.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,9,AUC-ROC,0.6725905673274094,sider__Gastrointestinal disorders__9.npy
+sider,classification,Social circumstances,CatBoost,morgan512,9,AUC-ROC,0.6222056631892697,sider__Social circumstances__9.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,9,AUC-ROC,0.6503619214740075,sider__Immune system disorders__9.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,9,AUC-ROC,0.6574917619693739,sider__Reproductive system and breast disorders__9.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,9,AUC-ROC,0.6148148148148148,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__9.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,9,AUC-ROC,0.7436868686868687,sider__General disorders and administration site conditions__9.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,9,AUC-ROC,0.754812834224599,sider__Endocrine disorders__9.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,9,AUC-ROC,0.4883219547251167,sider__Surgical and medical procedures__9.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,9,AUC-ROC,0.668031668031668,sider__Vascular disorders__9.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,9,AUC-ROC,0.7148110316649643,sider__Blood and lymphatic system disorders__9.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,9,AUC-ROC,0.685820895522388,sider__Skin and subcutaneous tissue disorders__9.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,9,AUC-ROC,0.640625,"sider__Congenital, familial and genetic disorders__9.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,9,AUC-ROC,0.6902675822874734,sider__Infections and infestations__9.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,9,AUC-ROC,0.6695847362514029,"sider__Respiratory, thoracic and mediastinal disorders__9.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,9,AUC-ROC,0.6354545454545454,sider__Psychiatric disorders__9.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,9,AUC-ROC,0.6717267552182163,sider__Renal and urinary disorders__9.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,9,AUC-ROC,0.6522388059701493,"sider__Pregnancy, puerperium and perinatal conditions__9.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,9,AUC-ROC,0.6647342995169082,sider__Ear and labyrinth disorders__9.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,9,AUC-ROC,0.7632378472222221,sider__Cardiac disorders__9.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,9,AUC-ROC,0.6171497584541064,sider__Nervous system disorders__9.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,9,AUC-ROC,0.6372340425531914,"sider__Injury, poisoning and procedural complications__9.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,5,AUC-ROC,0.640506329113924,sider__Hepatobiliary disorders__5.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,5,AUC-ROC,0.5671296296296295,sider__Metabolism and nutrition disorders__5.npy
+sider,classification,Product issues,CatBoost,morgan512,5,AUC-ROC,0.3415492957746479,sider__Product issues__5.npy
+sider,classification,Eye disorders,CatBoost,morgan512,5,AUC-ROC,0.6029545454545454,sider__Eye disorders__5.npy
+sider,classification,Investigations,CatBoost,morgan512,5,AUC-ROC,0.6279006279006281,sider__Investigations__5.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,5,AUC-ROC,0.5923076923076922,sider__Musculoskeletal and connective tissue disorders__5.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,5,AUC-ROC,0.7001262626262627,sider__Gastrointestinal disorders__5.npy
+sider,classification,Social circumstances,CatBoost,morgan512,5,AUC-ROC,0.6303168712532116,sider__Social circumstances__5.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,5,AUC-ROC,0.5814732142857143,sider__Immune system disorders__5.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,5,AUC-ROC,0.7228560188827695,sider__Reproductive system and breast disorders__5.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,5,AUC-ROC,0.6464646464646463,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__5.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,5,AUC-ROC,0.689405684754522,sider__General disorders and administration site conditions__5.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,5,AUC-ROC,0.6937728937728938,sider__Endocrine disorders__5.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,5,AUC-ROC,0.4365792310456342,sider__Surgical and medical procedures__5.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,5,AUC-ROC,0.5952041107622037,sider__Vascular disorders__5.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,5,AUC-ROC,0.7587540279269601,sider__Blood and lymphatic system disorders__5.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,5,AUC-ROC,0.7018087855297157,sider__Skin and subcutaneous tissue disorders__5.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,5,AUC-ROC,0.6794084821428572,"sider__Congenital, familial and genetic disorders__5.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,5,AUC-ROC,0.6699201419698314,sider__Infections and infestations__5.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,5,AUC-ROC,0.617283950617284,"sider__Respiratory, thoracic and mediastinal disorders__5.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,5,AUC-ROC,0.6538461538461539,sider__Psychiatric disorders__5.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,5,AUC-ROC,0.6905438311688311,sider__Renal and urinary disorders__5.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,5,AUC-ROC,0.576,"sider__Pregnancy, puerperium and perinatal conditions__5.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,5,AUC-ROC,0.6541015625,sider__Ear and labyrinth disorders__5.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,5,AUC-ROC,0.5905723905723906,sider__Cardiac disorders__5.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,5,AUC-ROC,0.6684045881126174,sider__Nervous system disorders__5.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,5,AUC-ROC,0.5316955472691379,"sider__Injury, poisoning and procedural complications__5.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,6,AUC-ROC,0.7199686458945717,sider__Hepatobiliary disorders__6.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,6,AUC-ROC,0.601197329035229,sider__Metabolism and nutrition disorders__6.npy
+sider,classification,Product issues,CatBoost,morgan512,6,AUC-ROC,0.7852112676056338,sider__Product issues__6.npy
+sider,classification,Eye disorders,CatBoost,morgan512,6,AUC-ROC,0.6434676434676435,sider__Eye disorders__6.npy
+sider,classification,Investigations,CatBoost,morgan512,6,AUC-ROC,0.5946218487394959,sider__Investigations__6.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,6,AUC-ROC,0.6822723379960034,sider__Musculoskeletal and connective tissue disorders__6.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,6,AUC-ROC,0.8154477101845523,sider__Gastrointestinal disorders__6.npy
+sider,classification,Social circumstances,CatBoost,morgan512,6,AUC-ROC,0.6246498599439776,sider__Social circumstances__6.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,6,AUC-ROC,0.539572192513369,sider__Immune system disorders__6.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,6,AUC-ROC,0.636976506639428,sider__Reproductive system and breast disorders__6.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,6,AUC-ROC,0.6910836069714575,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__6.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,6,AUC-ROC,0.608339029391661,sider__General disorders and administration site conditions__6.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,6,AUC-ROC,0.6096256684491977,sider__Endocrine disorders__6.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,6,AUC-ROC,0.4338054187192118,sider__Surgical and medical procedures__6.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,6,AUC-ROC,0.5721008403361345,sider__Vascular disorders__6.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,6,AUC-ROC,0.6808080808080809,sider__Blood and lymphatic system disorders__6.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,6,AUC-ROC,0.5810699588477366,sider__Skin and subcutaneous tissue disorders__6.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,6,AUC-ROC,0.7312252964426879,"sider__Congenital, familial and genetic disorders__6.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,6,AUC-ROC,0.6063636363636363,sider__Infections and infestations__6.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,6,AUC-ROC,0.6026986506746628,"sider__Respiratory, thoracic and mediastinal disorders__6.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,6,AUC-ROC,0.652686762778506,sider__Psychiatric disorders__6.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,6,AUC-ROC,0.6686622150587151,sider__Renal and urinary disorders__6.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,6,AUC-ROC,0.5353535353535354,"sider__Pregnancy, puerperium and perinatal conditions__6.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,6,AUC-ROC,0.6363281249999999,sider__Ear and labyrinth disorders__6.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,6,AUC-ROC,0.7121887287024902,sider__Cardiac disorders__6.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,6,AUC-ROC,0.7611510791366907,sider__Nervous system disorders__6.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,6,AUC-ROC,0.5687934027777778,"sider__Injury, poisoning and procedural complications__6.npy"
+sider,classification,Hepatobiliary disorders,CatBoost,morgan512,7,AUC-ROC,0.6711250983477577,sider__Hepatobiliary disorders__7.npy
+sider,classification,Metabolism and nutrition disorders,CatBoost,morgan512,7,AUC-ROC,0.6073394495412844,sider__Metabolism and nutrition disorders__7.npy
+sider,classification,Product issues,CatBoost,morgan512,7,AUC-ROC,0.7007042253521126,sider__Product issues__7.npy
+sider,classification,Eye disorders,CatBoost,morgan512,7,AUC-ROC,0.7271497584541063,sider__Eye disorders__7.npy
+sider,classification,Investigations,CatBoost,morgan512,7,AUC-ROC,0.6717585692995528,sider__Investigations__7.npy
+sider,classification,Musculoskeletal and connective tissue disorders,CatBoost,morgan512,7,AUC-ROC,0.6612781005304369,sider__Musculoskeletal and connective tissue disorders__7.npy
+sider,classification,Gastrointestinal disorders,CatBoost,morgan512,7,AUC-ROC,0.8262867647058824,sider__Gastrointestinal disorders__7.npy
+sider,classification,Social circumstances,CatBoost,morgan512,7,AUC-ROC,0.6661052631578948,sider__Social circumstances__7.npy
+sider,classification,Immune system disorders,CatBoost,morgan512,7,AUC-ROC,0.6024999999999999,sider__Immune system disorders__7.npy
+sider,classification,Reproductive system and breast disorders,CatBoost,morgan512,7,AUC-ROC,0.7169994184919559,sider__Reproductive system and breast disorders__7.npy
+sider,classification,"Neoplasms benign, malignant and unspecified (incl cysts and polyps)",CatBoost,morgan512,7,AUC-ROC,0.5761316872427984,"sider__Neoplasms benign, malignant and unspecified (incl cysts and polyps)__7.npy"
+sider,classification,General disorders and administration site conditions,CatBoost,morgan512,7,AUC-ROC,0.5950549450549452,sider__General disorders and administration site conditions__7.npy
+sider,classification,Endocrine disorders,CatBoost,morgan512,7,AUC-ROC,0.7079646017699115,sider__Endocrine disorders__7.npy
+sider,classification,Surgical and medical procedures,CatBoost,morgan512,7,AUC-ROC,0.572403880704276,sider__Surgical and medical procedures__7.npy
+sider,classification,Vascular disorders,CatBoost,morgan512,7,AUC-ROC,0.6981026785714286,sider__Vascular disorders__7.npy
+sider,classification,Blood and lymphatic system disorders,CatBoost,morgan512,7,AUC-ROC,0.7477006688963211,sider__Blood and lymphatic system disorders__7.npy
+sider,classification,Skin and subcutaneous tissue disorders,CatBoost,morgan512,7,AUC-ROC,0.6810661764705883,sider__Skin and subcutaneous tissue disorders__7.npy
+sider,classification,"Congenital, familial and genetic disorders",CatBoost,morgan512,7,AUC-ROC,0.6392764857881137,"sider__Congenital, familial and genetic disorders__7.npy"
+sider,classification,Infections and infestations,CatBoost,morgan512,7,AUC-ROC,0.5909090909090908,sider__Infections and infestations__7.npy
+sider,classification,"Respiratory, thoracic and mediastinal disorders",CatBoost,morgan512,7,AUC-ROC,0.598663101604278,"sider__Respiratory, thoracic and mediastinal disorders__7.npy"
+sider,classification,Psychiatric disorders,CatBoost,morgan512,7,AUC-ROC,0.706959706959707,sider__Psychiatric disorders__7.npy
+sider,classification,Renal and urinary disorders,CatBoost,morgan512,7,AUC-ROC,0.6882921589688507,sider__Renal and urinary disorders__7.npy
+sider,classification,"Pregnancy, puerperium and perinatal conditions",CatBoost,morgan512,7,AUC-ROC,0.7555555555555555,"sider__Pregnancy, puerperium and perinatal conditions__7.npy"
+sider,classification,Ear and labyrinth disorders,CatBoost,morgan512,7,AUC-ROC,0.63996138996139,sider__Ear and labyrinth disorders__7.npy
+sider,classification,Cardiac disorders,CatBoost,morgan512,7,AUC-ROC,0.7778732545649839,sider__Cardiac disorders__7.npy
+sider,classification,Nervous system disorders,CatBoost,morgan512,7,AUC-ROC,0.8093434343434344,sider__Nervous system disorders__7.npy
+sider,classification,"Injury, poisoning and procedural complications",CatBoost,morgan512,7,AUC-ROC,0.5810096153846154,"sider__Injury, poisoning and procedural complications__7.npy"

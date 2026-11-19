@@ -1,4 +1,4 @@
-"""Build the rows, the 3 representations and the 11 scaffold splits once, so every model sees the
+"""Build the rows, the 5 representations and the 11 scaffold splits once, so every model sees the
 same molecules. Run after download_data.py. Writes (folders in paths.py):
   data/moleculenet/{dataset}_rows.csv  row index, SMILES, labels (molecules RDKit can parse)
   features/{dataset}_{feat}.npy        feature matrix before cleaning
@@ -26,7 +26,7 @@ import featurize as F  # noqa: E402
 import paths as PT  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FEATS = ["rdkit2d", "ecfp4_2048", "maccs"]
+FEATS = ["rdkit2d", "rdkit2d_214", "ecfp4_2048", "morgan512", "maccs"]
 SPLITS: list[int | None] = [None] + list(range(10))
 
 

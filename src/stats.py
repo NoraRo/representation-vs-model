@@ -87,6 +87,33 @@ COMPARISONS = {
     "P_desc_gain": ("Chemprop|graph", "ChempropDesc|graph+rdkit2d"),
     "P_desc_rf_rdkit": ("RF|rdkit2d", "ChempropDesc|graph+rdkit2d"),
     "P_desc_tabfm": ("TabFM|rdkit2d", "ChempropDesc|graph+rdkit2d"),
+    # morgan512 and rdkit2d_214: the ablation per model, the input pairs of rdkit2d repeated on
+    # rdkit2d_214, and the model pairs on each new input
+    "N_abl_rf": ("RF|rdkit2d", "RF|rdkit2d_214"),
+    "N_abl_catboost": ("CatBoost|rdkit2d", "CatBoost|rdkit2d_214"),
+    "N_abl_tabpfn": ("TabPFN|rdkit2d", "TabPFN|rdkit2d_214"),
+    "N_abl_tabfm": ("TabFM|rdkit2d", "TabFM|rdkit2d_214"),
+    "N_rf_morgan512": ("RF|rdkit2d", "RF|morgan512"),
+    "N_tabpfn_morgan512": ("TabPFN|rdkit2d", "TabPFN|morgan512"),
+    "N_tabfm_morgan512": ("TabFM|rdkit2d", "TabFM|morgan512"),
+    "N_catboost_morgan512": ("CatBoost|rdkit2d", "CatBoost|morgan512"),
+    "N214_rf_ecfp4": ("RF|rdkit2d_214", "RF|ecfp4_2048"),
+    "N214_rf_maccs": ("RF|rdkit2d_214", "RF|maccs"),
+    "N214_tabpfn_ecfp4": ("TabPFN|rdkit2d_214", "TabPFN|ecfp4_2048"),
+    "N214_tabpfn_maccs": ("TabPFN|rdkit2d_214", "TabPFN|maccs"),
+    "N214_tabfm_maccs": ("TabFM|rdkit2d_214", "TabFM|maccs"),
+    "N214_catboost_ecfp4": ("CatBoost|rdkit2d_214", "CatBoost|ecfp4_2048"),
+    "N214_catboost_maccs": ("CatBoost|rdkit2d_214", "CatBoost|maccs"),
+    "N214_rf_morgan512": ("RF|rdkit2d_214", "RF|morgan512"),
+    "N214_tabpfn_morgan512": ("TabPFN|rdkit2d_214", "TabPFN|morgan512"),
+    "N214_tabfm_morgan512": ("TabFM|rdkit2d_214", "TabFM|morgan512"),
+    "N214_catboost_morgan512": ("CatBoost|rdkit2d_214", "CatBoost|morgan512"),
+    "N_model_morgan512_fm": ("RF|morgan512", "TabFM|morgan512"),
+    "N_model_morgan512_pfn": ("RF|morgan512", "TabPFN|morgan512"),
+    "N_model_morgan512_cat": ("RF|morgan512", "CatBoost|morgan512"),
+    "N_model_214_fm": ("RF|rdkit2d_214", "TabFM|rdkit2d_214"),
+    "N_model_214_pfn": ("RF|rdkit2d_214", "TabPFN|rdkit2d_214"),
+    "N_model_214_cat": ("RF|rdkit2d_214", "CatBoost|rdkit2d_214"),
 }
 
 
@@ -225,6 +252,7 @@ GRID_ARMS = ["RF|ecfp4_2048", "RF|maccs", "RF|rdkit2d",
              "CatBoost|ecfp4_2048", "CatBoost|maccs", "CatBoost|rdkit2d",
              "TabPFN|ecfp4_2048", "TabPFN|maccs", "TabPFN|rdkit2d",
              "TabFM|maccs", "TabFM|rdkit2d"]
+GRID_ARMS += [f"{m}|{i}" for i in ("morgan512", "rdkit2d_214") for m in ("RF", "CatBoost", "TabPFN", "TabFM")]
 # square name: (reference model, compared model, starting input, rdkit2d)
 SQUARES = {
     "tabfm_maccs": ("RF", "TabFM", "maccs"),
@@ -232,8 +260,12 @@ SQUARES = {
     "catboost_maccs": ("RF", "CatBoost", "maccs"),
     "tabpfn_ecfp4": ("RF", "TabPFN", "ecfp4_2048"),
     "catboost_ecfp4": ("RF", "CatBoost", "ecfp4_2048"),
+    "tabfm_morgan512": ("RF", "TabFM", "morgan512"),
+    "tabpfn_morgan512": ("RF", "TabPFN", "morgan512"),
+    "catboost_morgan512": ("RF", "CatBoost", "morgan512"),
 }
 TARGET_INPUT = "rdkit2d"
+GRID_INPUTS = ("ecfp4_2048", "maccs", "morgan512", "rdkit2d_214")
 
 
 def square_quantities(kind: str, S: dict) -> dict:
@@ -259,7 +291,7 @@ def square_quantities(kind: str, S: dict) -> dict:
         for k, v in q.items():
             out[(sq, k)] = v
     # grid-wide input effect: rdkit2d vs each other input, averaged over every model that has both
-    for i0 in ("ecfp4_2048", "maccs"):
+    for i0 in GRID_INPUTS:
         ms = [m for m in ("RF", "CatBoost", "TabPFN", "TabFM") if f"{m}|{i0}" in S]
         out[("all_models", f"input_from_{i0.split('_')[0]}")] = sum(
             gain(kind, S[f"{m}|{i0}"], S[f"{m}|{TARGET_INPUT}"]) for m in ms) / len(ms)

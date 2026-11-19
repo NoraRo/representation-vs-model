@@ -4,8 +4,14 @@ esol,aqsoldbc,tabpfn_maccs,input,input
 esol,aqsoldbc,catboost_maccs,input,input
 esol,aqsoldbc,tabpfn_ecfp4,input,input
 esol,aqsoldbc,catboost_ecfp4,input,input
+esol,aqsoldbc,tabfm_morgan512,input,input
+esol,aqsoldbc,tabpfn_morgan512,input,input
+esol,aqsoldbc,catboost_morgan512,input,input
 lipophilicity,rtlogd_tdata,tabfm_maccs,input,input
 lipophilicity,rtlogd_tdata,tabpfn_maccs,input,input
 lipophilicity,rtlogd_tdata,catboost_maccs,input,input
 lipophilicity,rtlogd_tdata,tabpfn_ecfp4,input,input
 lipophilicity,rtlogd_tdata,catboost_ecfp4,input,input
+lipophilicity,rtlogd_tdata,tabfm_morgan512,input,input
+lipophilicity,rtlogd_tdata,tabpfn_morgan512,input,input
+lipophilicity,rtlogd_tdata,catboost_morgan512,input,input

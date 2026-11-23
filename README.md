@@ -1,7 +1,11 @@
-# Representation and Model Contributions on Small Molecular Benchmarks
+# Representation and Model Contributions on Small Molecular Benchmarks: Controlled Comparisons and External Evaluation
 
-This repository belongs to the paper *Representation and Model Contributions on Small Molecular
-Benchmarks: Controlled Comparisons and External Evaluation*. The paper asks how much of a model's
+Nora A. M. A. Talkhan, Ibrahim Abdelbaky, Fatma A. Omara\
+2026 7th International Conference on Computing and Informatics (ICCI), to appear
+
+📄 If you use this code or the results, please [cite the paper](#citation).
+
+This repository holds the code and results for the paper. The paper asks how much of a model's
 accuracy on small molecular datasets comes from the model and how much from the molecular
 representation. It separates the two with a two-by-two factorial design: a random forest and a
 second model (CatBoost or a tabular foundation model) are each trained on a fingerprint and on RDKit
@@ -11,8 +15,7 @@ splits, and the findings are tested on external datasets.
 
 Everything needed to check the results is here: the code, the splits, each model's saved
 predictions and the statistics. Every number can be recomputed from the saved predictions without
-training a model. Retraining is optional. The supplementary material (S1–S7) is
-`docs/supplement.pdf`.
+training a model.
 
 ## Contents
 
@@ -24,7 +27,6 @@ training a model. Retraining is optional. The supplementary material (S1–S7) i
 | `results/stats/` | Every statistic in the paper and the supplement, as CSV |
 | `results/identity/` | Test molecules that also occur in training (by InChIKey or tautomer), and duplicates inside each dataset |
 | `results/external/` | Predictions for the external datasets (no labels) and `gate.csv`, the check that the refitted models reproduce the saved MoleculeNet predictions |
-| `docs/` | `supplement.pdf` |
 
 No data files and no model weights are included. The scripts download or rebuild them (steps 2
 and 4).
@@ -81,8 +83,6 @@ the rest, and `extra_squares.py` before `similarity_check.py`.
 | `similarity_*.csv` | S5 High- and low-similarity test molecules |
 | `comparisons_*.csv`, `signtest.csv`, `dataset_scores.csv`, `dgt_seeds_*.csv` | S6 Model comparisons and DGT reproduction |
 | `external_*.csv` | S1 Datasets and statistical tests, and the external-dataset results |
-
-S7 (run time and memory) is in the supplement only.
 
 ## 4. Training
 
@@ -182,6 +182,28 @@ TabFM+ in `src/train_tabular.py`, Chemprop in `src/train_chemprop.py`, and featu
 | `identity_audit.py` | The same molecule in training and test |
 | `stats.py`, `extra_squares.py`, `variance_decomp.py`, `similarity_check.py`, `dgt_seed_tests.py`, `logp_recovery.py` | Statistics |
 | `external_test.py` | External datasets |
+
+## Citation
+
+If you use this code or the results, please cite the paper:
+
+N. A. M. A. Talkhan, I. Abdelbaky and F. A. Omara, "Representation and Model Contributions on
+Small Molecular Benchmarks: Controlled Comparisons and External Evaluation," in *2026 7th
+International Conference on Computing and Informatics (ICCI)*, Cairo, Egypt, 2026, to appear.
+
+```bibtex
+@inproceedings{talkhan2026representation,
+  author    = {Talkhan, Nora A. M. A. and Abdelbaky, Ibrahim and Omara, Fatma A.},
+  title     = {Representation and Model Contributions on Small Molecular Benchmarks:
+               Controlled Comparisons and External Evaluation},
+  booktitle = {2026 7th International Conference on Computing and Informatics (ICCI)},
+  address   = {Cairo, Egypt},
+  publisher = {IEEE},
+  month     = dec,
+  year      = {2026},
+  note      = {To appear}
+}
+```
 
 ## Licence
 

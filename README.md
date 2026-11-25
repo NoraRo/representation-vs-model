@@ -1,7 +1,8 @@
 # Representation and Model Contributions on Small Molecular Benchmarks: Controlled Comparisons and External Evaluation
 
 Nora A. M. A. Talkhan, Ibrahim Abdelbaky, Fatma A. Omara\
-2026 7th International Conference on Computing and Informatics (ICCI), to appear
+2026 7th International Conference on Computing and Informatics (ICCI), to appear\
+Preprint: [arXiv:2611.32568](https://arxiv.org/abs/2611.32568)
 
 📄 If you use this code or the results, please [cite the paper](#citation).
 
@@ -189,7 +190,8 @@ If you use this code or the results, please cite the paper:
 
 N. A. M. A. Talkhan, I. Abdelbaky and F. A. Omara, "Representation and Model Contributions on
 Small Molecular Benchmarks: Controlled Comparisons and External Evaluation," in *2026 7th
-International Conference on Computing and Informatics (ICCI)*, Cairo, Egypt, 2026, to appear.
+International Conference on Computing and Informatics (ICCI)*, Cairo, Egypt, 2026, to appear,
+[arXiv:2611.32568 \[cs.LG\]](https://arxiv.org/abs/2611.32568).
 
 ```bibtex
 @inproceedings{talkhan2026representation,
@@ -201,7 +203,10 @@ International Conference on Computing and Informatics (ICCI)*, Cairo, Egypt, 202
   publisher = {IEEE},
   month     = dec,
   year      = {2026},
-  note      = {To appear}
+  note      = {To appear},
+  eprint    = {2611.32568},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
 }
 ```
 
